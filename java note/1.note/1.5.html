@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Java开发环境的搭配</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-02-13
+        	描述：Java开发环境的搭配
+        -->
+        <center>
+			<h1>Java开发环境的搭配</h1>  
+        </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#1">1.JDK下载即环境变量配置</a></li>
+        		<li class="fontsize_1 null_string"><a href="#2">2.下载和配置eclipse</a></li>
+        		<li class="fontsize_1 null_string"><a href="#3">3.eclipse安装server插件</a></li>
+        		<li class="fontsize_1 null_string"><a href="#4">4.eclipse配置tomcat</a></li>
+        		<li class="fontsize_1 null_string"><a href="#5">5.eclipse配置Maven</a></li>
+        		<li class="fontsize_1 null_string"><a href="#6">6.卸载mysql</a></li>
+        		<li class="fontsize_1 null_string"><a href="#7">7.mysql下载与安装</a></li>
+        		<li class="fontsize_1 null_string"><a href="#8">8.下载并安装navicat</a></li>
+        		<li class="fontsize_1 null_string"><a href="#9">9.SVN</a></li>
+        		<li class="fontsize_1 null_string"><a href="#10">10.Git</a></li>
+        	</ul>
+        </div>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">JDK下载即环境变量配置:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.下载:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载目录:<a href="https://www.oracle.com/java/technologies/javase-jdk13-downloads.html" target="_blank">https://www.oracle.com/java/technologies/javase-jdk13-downloads.html</a>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击jdk-**_windows-x64_bin.zip进行下载，然后进行解压
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">2.环境变量配置:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">打开我的电脑，按照如下操作顺序：“鼠标右键-->属性-->高级系统设置-->高级-->环境变量”</li>					
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/hjbl1.png" width="800px" height="500px" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">在选择环境变量过后，我们可以看到如下界面，此时再选择“系统变量-->新建”，此时将会弹出新建系统变量的对话框，在变量名处输入“JAVA_HOME”，在变量值中输入JAVA的安装路径，点击确定；</li>					
+			</ul>	
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/hjbl2.png" width="700px" height="500px" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">在完成上一步之后，继续在环境变量中双击Path，将会弹出“编辑环境变量”的对话框，此时点击“新建”，输入以下内容：“%JAVA_HOME%/bin”，之后点击确定，JAVA的环境变量就算是配置完成了^_^</li>				
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/hjbl3.png" width="700px" height="500px" />
+				</li>				
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">3.检验环境变量是否配置成功 </li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">经过上述步骤，我们想要知道是否已经成功搭建起了JAVA的开发环境，于是我们进入DOS窗口，分别输入java、javac、java -version，查看是否有类似下图的显示内容。</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">输入java:</li>
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/hjbl4.png" width="700px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">输入javac:</li>
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/hjbl5.png" width="700px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">输入java -version:</li>
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/hjbl6.png" width="700px" height="500px" />
+				</li>
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">下载和配置eclipse:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.下载:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载目录:<a href="https://www.eclipse.org/downloads/" target="_blank">https://www.eclipse.org/downloads/</a>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					我们会到官网中找到如下的下载按钮，但默认下载的是Windows操作系统的64位，我们点击Download Packages选择其他类型的下载包
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_1.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择Eclipse IDE for Eclipse Committers ，按需求选择符合自己操作系统的版本
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_2.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					之后我们来到如下界面，默认下载地址是日本的一所大学，我们点击Select Another Mirror选择其他地区的镜像，至于为何，选择距我们较近的地区，下载速度较快。
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string color_red">
+					（下载为.zip格式的好处，不用安装，容易卸载）
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_3.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择的是中国科技大学提供的
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_4.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击后等10多秒会自动下载，之后浏览器弹出的如下界面不用理会
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_5.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载成功。下载后的文件为eclipse-committers-photon-R-win32-x86_64.zip文件
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">2.安装:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击运行eclipse.exe
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_6.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					设置代码的存储位置，安装完成
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_7.png" />
+				</li>
+			</ul>
+			<ul>
+				<li id="3" class="fontsize thick">eclipse安装server插件</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					找到Help->Install New Software
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					输入框Work with填的是Kepler - http://download.eclipse.org/releases/kepler
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择server 插件"JST server adapters extension"安装
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_9.png" width="800px" height="600px" />
+				</li>
+			</ul>
+			<ul>
+				<li id="4" class="fontsize thick">eclipse配置tomcat</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.下载</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择左侧的Tomcat版本
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_10.png" width="500px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					对应着操作系统位数进行下载，下载后会是一个zip压缩包
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_11.png" width="500px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">2.配置</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					打开eclipse，单击"window"菜单，选择下方的"Preferences",找到"Server"选项中的"Runtime Environments"
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_12.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击"add"的添加按钮,弹出如下界面
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_13.png" width="400px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择对应的Tomcat版本，点击next，如图：
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_14.png" width="400px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					上图中，选择Tomcat的路径，以及JRE（使用工作平台默认的，不用做额外添加修改），点击“完成”，配置完毕。
+				</li>
+			</ul>
+			<ul>
+				<li id="5" class="fontsize thick">eclipse配置Maven</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.下载</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载地址:<a href="https://maven.apache.org/download.cgi" target="_blank">https://maven.apache.org/download.cgi</a>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_15.png" width="800px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					这里下载第二个就可以，  最后两个src.tar.gz是源码
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">
+					2.配置maven环境变量
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					maven需要新建一个MAVEN_HOME，内容是解压的maven文件路径
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_16.png" width="700px" height="300px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_17.png" width="700px" height="200px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					然后在Path中添加 %MAVEN_HOME%\bin
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">
+					3.测试是否配置成功
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					打开命令提示符，输入 mvn -version(maven所有命令都是mvn)
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_18.png" width="700px" height="200px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">
+					4.在Eclipse上安装maven
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					打开Eclipse点击window>prferences之后会弹出
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_28.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_29.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击确定之后会出现：
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_30.png" width="500px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击finish之后：
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_31.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">
+					5.连接本地仓库
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					第一步：首先需要找到你的maven解压文件夹，然后打开conf子文件夹，然后编辑settings.xml
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_32.png" width="900px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					第二步：回到eclipse中点击window再点击preferences
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_33.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul>
+				<li id="6" class="fontsize thick">卸载mysql</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					打开cmd命令行来卸载MySQL：
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					1.停止MySQL服务
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_20.png" width="400px" height="100px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					2.卸载MySQL
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_21.png" width="400px" height="60px" />
+				</li>
+			</ul>
+			<ul>
+				<li id="7" class="fontsize thick">mysql下载与安装</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.下载</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载地址:<a href="https://downloads.mysql.com/archives/community/" target="_blank">https://downloads.mysql.com/archives/community/</a>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择Windows版本进行下载
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_22.png" width="800px" height="400px" />
+				</li>
+			</ul>
+			<ul>
+				<li class="fontsize thick">
+					2.解压安装包并配置环境变量
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					将压缩包放在一个合适的盘进行解压，我这里放在了E盘，解压后建议将文件夹重命名为mysql5.7.23
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_23.png" width="800px" height="300px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					配置环境变量：
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					右击我的电脑/计算机，点击属性，打开高级系统设置，点击环境变量
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					变量名：MYSQL_HOME
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					变量值：E:\mysql5.7.23
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					path里添加：%MYSQL_HOME%\bin
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					新建data文件夹
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					检查根目录中有没有my_default.ini文件，没有的话，需要自己创建一个，文件名字为my.ini；首先创建一个txt文件，其中内容为：
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<pre>
+[mysqld]
+    port = 3306
+    basedir=D:/mysql-5.7.28
+    datadir=D:/mysql-5.7.28/data
+    max_connections=200
+    character-set-server=utf8
+    default-storage-engine=INNODB
+    sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+
+    [mysql]
+    default-character-set=utf8
+    skip-grant-tables
+ 
+    修改文件名为my.ini；
+    将该文件放置解压文件的根目录中
+					</pre>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_24.png" width="800px" height="200px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					以管理员身份进入到bin/目录下的cmd
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(1)mysqld -install    --安装命令(卸载命令 mysqld --remove)
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(2)mysqld --initialize-insecure --user=mysql    -- 初始化
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(3)net start mysql --启动mysql服务(停止mysql服务 net stop mysql)
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_25.png" width="800px" height="200px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(4)登录mysql，键入mysql –uroot –p；直接回车（Enter）
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_34.png" width="700px" height="280px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(5)执行"use mysql"使用mysql数据库
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(6)执行"update user set password=PASSWORD("root") where user='root';"（修改root的密码）
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(7)打开MySQL目录下的my.ini文件，删除最后一行的"skip-grant-tables"，保存并关闭文件。
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(8)重启MySQL服务
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(9)在命令行中输入"mysql -u root -p"输入密码即可成功连接数据库
+				</li>
+			</ul>
+			<ul>
+				<li class="fontsize thick">
+					3.查看是否安装成功
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					继续输入mysql --version，查看是否安装成功
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_26.png" width="900px" height="40px" />
+				</li>
+			</ul>
+			<ul>
+				<li class="fontsize thick">
+					4.登陆
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					cmd进入后，输入mysql -u root -p  ，然后输入你刚才设置的密码；quit 退出。
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_27.png" width="700px" height="300px" />
+				</li>
+			</ul>
+			<ul>
+				<li id="8" class="fontsize thick">下载并安装navicat</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.下载</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					链接：<a href="https://pan.baidu.com/s/1CrPtcYkGO9r9OAezh6pAtA" target="_blank">https://pan.baidu.com/s/1CrPtcYkGO9r9OAezh6pAtA</a> 
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					提取码：roq3 
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					或者我的网盘或者U盘
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">2.安装</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择同意协议，然后点击Next
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_35.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					设置Navicat的安装路径，至少要保证磁盘有250M的安装空间。在这里，选择D盘的安装路径
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_36.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选择开始目录，默认或者更改都可以，这里直接默认，然后继续进行下一步
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_37.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					这一步是是否创建桌面图标，默认是勾选上的。直接保持默认即可，然后选择下一步
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_38.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					准备安装。如果前面已经设置好了的话，这一步直接点击"Install"即可，之后便可以进行安装了
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_39.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					安装进行中，如下图所示
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_40.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul>
+				<li id="9" class="fontsize thick">SVN</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.安装VisualSVN server 服务端安装（windows）:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载地址:<a href="https://www.visualsvn.com/server/download/" target="_blank">https://www.visualsvn.com/server/download/</a>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(1)下载与本机操作系统匹配的
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_50.png" width="800px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载完成后是这样的
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_51.png" width="800px" height="50px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(2)安装VisualSVN server
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_52.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_53.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_54.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_55.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Location是指VisualSVN Server的安装目录
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Repositorys是指定你的版本库目录
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Server Port指定一个端口
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Use secure connection勾山表示使用安全连接
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_56.png" width="500px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_57.png" width="500px" height="300px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					安装完成后会在系统服务中有SVN服务项，并且默认是开机启动
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_58.png" width="800px" height="130px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(3)创建用户
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					打开VisualSVN server Manger
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_59.png" width="800px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_60.png" width="800px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_61.png" width="400px" height="200px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_62.png" width="700px" height="150px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(4)创建资源库
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					资源库：用户提交文件到SVN，存放文件的仓库
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_63.png" width="800px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_64.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_65.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_66.png" width="700px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_67.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					这里我们选择自定义权限:
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_68.png" width="600px" height="300px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_69.png" width="500px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_70.png" width="700px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_71.png" width="600px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_72.png" width="300px" height="90px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">2.eclipse配置SVN:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(1)下载地址:<a href="http://subclipse.tigris.org/servlets/ProjectDocumentList?folderID=2240&expandFolder=2240&folderID=1732" target="_blank">http://subclipse.tigris.org/servlets/ProjectDocumentList?folderID=2240&expandFolder=2240&folderID=1732</a>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_41.png" width="1100px" height="500px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(2)点击 Help --> Install New Software...
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_42.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(3)在弹出的窗口中点击add按钮，输入Name(任意)和Location(插件的URL)，点击OK
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_43.png" width="1000" height="700" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(4)勾选出现的插件内容，一步步安装即可
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_44.png" width="800" height="650" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(5)next
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_45.png" width="800" height="650" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(6)next
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_46.png" width="800" height="650" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(7)下面可能会出现警告，点击install anyway
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_47.png" width="600" height="210" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(8)最后重启
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_48.png" width="600" height="180" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_73.png" width="400" height="550" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(9)右击项目，Team-Share Project
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_74.png" width="600" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_75.png" width="600" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_76.png" width="600" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_77.png" width="700" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_78.png" width="400" height="200" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">3.检出svn仓库项目到eclipse:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					首先创建svn资源库然后添加地址——>import——>svn——>从svn检出项目——>选择项目
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">4.SVN常规操作:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(1)提交
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_79.png" width="300" height="200" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_80.png" width="600" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(2)更新
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					在eclipse中右键【shop项目】-【team】-【与资源库同步】，然后在SVN同步窗口中右键【shop项目】-【更新】，即可更新项目
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(3)删除项目的某部分文件
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					先删除不要的文件，然后剩下的步骤同提交项目的步骤，即先与资源库同步，再提交
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(4)解决冲突
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					先更新，再保留合并后的代码（删除多余的注释和代码），再提交即可解决冲突
+				</li>
+			</ul>
+			<ul>
+				<li id="10" class="fontsize thick">Git:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">1.下载:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下载地址:<a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_81.png" width="1000" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_82.png" width="1000" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_83.png" width="400" height="50" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">2.安装:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_84.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_85.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_86.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_87.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_88.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_89.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_90.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_91.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_92.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_93.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_94.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_95.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_96.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">3.设置全局身份:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(1)打开git Bash
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					桌面右键点击——>git Bash
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_97.png" width="300" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_98.png" width="500" height="300" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(2)写出名字和邮箱
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					$ git config --global user.name 'Your name'
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					$ git config --global user.email 'email@example.com'
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					eclipse会识别出来用户名和邮箱
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_99.png" width="500" height="300" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(3)创建版本库
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					新建一个Git文件夹
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_100.png" width="200" height="40" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					在git Bash中跳转到新建的文件夹中
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_101.png" width="400" height="150" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					在git Bash中新建一个Git目录下的hello文件夹
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_102.png" width="400" height="80" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_103.png" width="500" height="350" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					跳转hello页
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_104.png" width="400" height="60" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					进行对git初始化
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_105.png" width="500" height="70" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">4.eclipse插件创建本地git仓库</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					创建项目——>Team——>Share Project...
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_106.png" width="400" height="350" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_107.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_108.png" width="500" height="400" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_109.png" width="500" height="300" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">5.commit代码到本地git仓库</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选中需要commit的项目，右键Team——>commit
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_110.png" width="600" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					把Unstaged Changes里面的文件，右击add to index，加到下面的Staged Changes里面来才能提交
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_111.png" width="1000" height="500" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					commit and push是提交到github，commit是提交到本地资源库
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">6.创建github仓库</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					在命令行中输入ssh-keygen -t rsa -C "your_emial@examle.com"，再点三次回车
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					默认会在相应路径下（/c/Users/lenovo/.ssh/id_rsa）生成id_rsa和id_rsa.pub 、known_hosts三个文件，如下图所示
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_112.png" width="500" height="300" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">7.SSH Key添加到 码云 或者GitHub中</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					打开github选择new repository创建仓库
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_113.png" width="300px" height="300px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_114.png" width="800px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_115.png" width="1000px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">7.创建SSH Key</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击用户名
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_116.png" width="200px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					点击Edit profile找到SSH and GPG keys中的New SSH Key
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_117.png" width="900px" height="80px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_118.png" width="900px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					打开id_rsa.pub文件，里面的信息即为SSH key，直接复制出来添加到ssh管理即可
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_119.png" width="700px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_120.png" width="600px" height="200px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">8.push代码到github远程仓库</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					选中需要push的项目右键Team——>Remote——>Push，URL填写github获取的https地址，user和password填写你的github账号和密码即可
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_121.png" width="600px" height="400px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_122.png" width="500px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_123.png" width="500px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_124.png" width="500px" height="600px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_125.png" width="500px" height="300px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_126.png" width="260px" height="100px" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize thick">9.github中的项目克隆到eclipse</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_127.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_128.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_129.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_130.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_131.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_132.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_133.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_134.png" />
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_135.png" />
+				</li>
+			</ul><ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.5_136.png" />
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

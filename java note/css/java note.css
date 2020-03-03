@@ -1,0 +1,132 @@
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color: #FF5809;
+}
+h4{
+	font-weight: normal;
+}
+.index_span{
+	 position: relative;
+	 top: 6px;
+}
+.index_span2{
+	 position: relative;
+	 left: 5px;
+}
+.index_div{
+	 margin-left: 50px;
+	 display: none;
+}
+.fontsize{
+	font-size: 18px;
+}
+.fontsize_1{
+	font-size: 20px;
+}
+.fontsize_2{
+	font-size: 23px;
+}
+.ul li{
+	list-style-type: none;
+}
+.null_string{
+	text-indent:2em;
+}
+.thick{
+	font-weight:bold
+}
+.color_red{
+	color: red;
+}
+.color_purple{
+	color:#750075;	
+}
+.color_green{
+	color:#01814A;
+}
+.color_darkblue{
+	color:#000079;
+}
+.color_blue{
+	color: #0000C0;
+}
+.border{
+	border: #d0d0d0;
+}
+.margin_left50{
+	margin-left: 50px;
+}
+.border_radius{
+	margin: 0 auto;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px #ADADAD;
+	box-shadow:1px 1px 1px 1px rgba(0,0,0,.1) 
+}
+.border_radius tr td:first-child,.border_radius tr td:first-child {/*设置table左边边框*/
+	border-left: 1px solid #ADADAD;
+}
+.border_radius tr td:last-child,.border_radius tr td:last-child {/*设置table右边边框*/
+	border-right: 1px solid #ADADAD;
+}
+.border_radius:first-child{/*设置上边框*/
+	border-top: 1px solid #ADADAD;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.border_radius:last-child{/*设置下边框*/
+	border-bottom: 1px solid #ADADAD;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.border_radius tr td {
+	background: #F0F0F0;
+}
+.border_radius tr:first-child td:first-child {
+	border-top-left-radius: 5px;
+}
+.border_radius tr:first-child td:last-child {
+	border-top-right-radius: 5px;
+}
+.border_radius tr:last-child td:first-child {
+	border-bottom-left-radius: 5px;
+}
+.border_radius tr:last-child td:last-child {
+	border-bottom-right-radius: 5px;
+}
+.right_1{
+	text-indent: 30px;
+}
+.right_2{
+	text-indent: 60px;
+}
+.right_3{
+	text-indent: 90px;
+}
+.right_4{
+	text-indent: 120px;
+}
+.right_5{
+	text-indent: 150px;
+}
+.string_1{
+	text-indent: 60px;
+}
+.width_60{
+	width: 60px;
+}
+.width_100{
+	width: 100px;
+}
+.width_180{
+	width: 180px;
+}
+.width_200{
+	width: 200px;
+}
+.width_260{
+	width: 260px;
+}

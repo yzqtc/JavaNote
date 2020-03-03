@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>类型转换</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-02-28
+        	描述：类型转换
+        -->
+        <center>
+			<h1>类型转换</h1>  
+        </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#1">1.自动类型转换</a></li>
+        		<li class="fontsize_1 null_string"><a href="#2">2.强制类型转换</a></li>
+        	</ul>
+        </div>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">自动类型转换</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					自动类型转换指的是容量小的数据类型可以自动转换为容量大的数据类型。如图，红色的实线表示无数据丢失的自动类型转换，而虚线表示在转换时可能会有精度的丢失
+ 				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img height="300px" src="../img/17_1.png" />
+				</li>					
+			</ul>	
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例1]自动类型转换:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>short b = 12; //合法</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>short b = 1234567; //非法，1234567超出了short的表数范围</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">强制类型转换</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					强制类型转换，又被称为造型，用于显式的转换一个数值的类型。在有可能丢失信息的情况下进行的转换是通过造型来完成的，但可能造成精度降低或溢出
+ 				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					语法格式:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>(type)var</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					运算符"()"中的type表示将值var想要转换成目标数据类型
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例2]强制类型转换:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>double x = 3.14;</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>int nx = (int)x; //值为3</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>char c = 'a';</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>int d = c + 1;</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>System.out.println(nx); //3</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>System.out.println(d); //98</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>System.out.println((char)d); //b</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

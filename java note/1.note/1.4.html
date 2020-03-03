@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JVM、JRE、JDK之间的关系</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-02-12
+        	描述：JVM、JRE、JDK之间的关系
+        -->
+        <center>
+			<h1>JVM、JRE、JDK之间的关系</h1>  
+        </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#jvm">1.JVM</a></li>
+        		<li class="fontsize_1 null_string"><a href="#jre">2.JRE</a></li>
+        		<li class="fontsize_1 null_string"><a href="#jdk">3.JDK</a></li>
+        		<li class="fontsize_1 null_string"><a href="#and">4.三者之间关系</a></li>
+        	</ul>
+        </div>
+		<div>
+			<ul>
+				<li id="jvm" class="fontsize null_string thick">JVM(Java Virtual Machine)</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">就是一个虚拟的用于执行bytecode字节码的"虚拟计算机"。它是整个java实现跨平台的最核心的部分，所有的java程序会首先被编译为.class的类文件，这种类文件可以在虚拟机上执行，也就是说class并不直接与机器的操作系统相对应，而是经过虚拟机间接与操作系统交互，由虚拟机将程序解释给本地系统执行。 
+可以理解为是一个虚拟出来的计算机，具备着计算机的基本运算方式，它主要负责将java程序生成的字节码文件解释成具体系统平台上的机器指令。让具体平台如window运行这些Java程序。是JRE的一部分. JVM只能识别.class文件(字节码文件). java之所以能够实现跨平台就在于java面对不同操作系统时使用不同的虚拟机(JVM), 有 Linux 版本的JVM实现, 也有Windows 版本的JVM实现.可以看出JVM本身不具有跨平台性, 但不同平台的JVM可以将同一个.class文件解释并映射为本地CPU的机器指令或操作系统的系统调用, 以实现跨平台. 换句话说, JVM其实就是为了完成字节码文件和本地的机器指令之间的映射。
+ 				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/yx.png" width="500px" height="260px" />
+				</li>					
+			</ul>
+			<ul>
+				<li id="jre" class="fontsize null_string thick">JRE(Java Runtime Environment)</li>					
+			</ul>	
+			<ul class="ul">
+				<li class="fontsize null_string">包含:Java虚拟机、库函数、运行Java应用程序所必须的文件。是运行JAVA程序所必须的环境的集合, 它主要包含两个部分, JVM 的标准实现和 Java 的一些基本类库. 简言之, JRE = JVM + 基本lib .在Java平台下, 所有的Java程序都需要在JRE下才能运行, 它是针对java用户的. 当我们只需要运行Java程序的时候, 在电脑上安装JRE即可. 与JDK不同, 它不包含开发工具–编译器, 调试器和其它工具, 而这些只在JDK中才有。</li>		
+				
+			</ul>
+			<ul>
+				<li id="jdk" class="fontsize null_string thick">JDK(Java Development Kit)</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">是整个Java的核心, 包括了Java运行环境JRE, Java工具(javac,java,jdb)和Java基础类库(即Java API). 它是用来开发Java程序的, 如果要进行java程序开发,就必须安装JDK, 它是针对java开发者的. 即JDK = JRE +开发工具. 下面简要介绍一下JDk的文件目录结构. bin:JDK包含的一些开发工具执行文件, 如编译命令javac.exe. lib: Java开发工具要用的一些库文件. jre:JDK使用的Java运行环境(JRE)的根目录, 这个运行环境实现了Java平台.下图是JDK详细的目录结构。
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/jdk.png"/>
+				</li>
+			</ul>
+			<ul>
+				<li class="fontsize null_string">如果只是要运行Java程序,只需要JRE就可以.JRE通常非常小,其中包含JVM。如果要开发Java程序,就需要安装JDK</li>					
+			</ul>
+			<ul>
+				<li class="fontsize null_string">简单而言：使用JDK开发完成的java程序，交给JRE去运行。</li>					
+			</ul>
+			<ul>
+				<li id="and" class="fontsize null_string thick">三者之间关系:</li>	
+			</ul>
+			<ul class="ul">
+				<li class="null_string">
+					<img src="../img/jvm、jre、jdk.png" width="300px" height="200px" />
+				</li>	
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符型</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-02-24
+        	描述：字符型
+        -->
+        <center>
+			<h1>字符型</h1>  
+        </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#1">1.字符型变量/常量</a></li>
+        		<li class="fontsize_1 null_string"><a href="#2">2.转义字符 </a></li>
+        	</ul>
+        </div>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">字符型变量/常量</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					字符型在内存中占2个字节，在Java中使用单引号来表示字符常量。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					char类型用来表示在Unicode编码表中的字符。Unicode编码被设计用来处理各种语言的文字，它占2个字节，可允许有65536个字符
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例1]字符型举例:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>char c = 'a';</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>char c1 = '中';</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Unicode具有从0到65535之间的编码，他们通常用从'\u0000'到'\uFFFF'之间的十六进制值来表示(前缀为u表示Unicode)
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例2]字符型十六进制值表示方法:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>char c = '\u0061';</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Java语言中还允许使用转义字符'\'来将其后的字符转变为其他的含义。常用的转义字符及其含义和Unicode值如表所示
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">
+					转义字符
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例3]转义字符:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>char c = '\n'; //表示换行符</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="500px" height="150px">
+						<tr align="center">
+							<td colspan="3">转义字符</td>
+						</tr>
+						<tr align="left">
+							<td>转义符</td>
+							<td>含义</td>
+							<td>Unicode值</td>
+						</tr>
+						<tr align="left">
+							<td>\b</td>
+							<td>退格(backspace)</td>
+							<td>\u0008</td>
+						</tr>
+						<tr align="left">
+							<td>\n</td>
+							<td>换行</td>
+							<td>\u000a</td>
+						</tr>
+						<tr align="left">
+							<td>\r</td>
+							<td>回车</td>
+							<td>\u000d</td>
+						</tr>
+						<tr align="left">
+							<td>\t</td>
+							<td>制表符(tab)</td>
+							<td>\u0009</td>
+						</tr>
+						<tr align="left">
+							<td>\"</td>
+							<td>双引号</td>
+							<td>\u0022</td>
+						</tr>
+						<tr align="left">
+							<td>\'</td>
+							<td>单引号</td>
+							<td>\u0027</td>
+						</tr>
+						<tr align="left">
+							<td>\\</td>
+							<td>反斜杠</td>
+							<td>\u005c</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Java的注释、标识符、标识符的命名规范</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-02-15
+        	描述：Java的注释、标识符、标识符的命名规范
+        -->
+        <center>
+			<h1>Java的注释、标识符、标识符的命名规范</h1>  
+        </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#1">1.三种注释方法</a></li>
+        		<li class="fontsize_1 null_string"><a href="#2">2.标识符的注意事项及命名规则 </a></li>
+        	</ul>
+        </div>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">三种注释方法：</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					 1、单行注释   //注释的内容
+				</li>					
+			</ul>	
+			<ul class="ul">
+				<li class="fontsize null_string">
+					 2、多行注释  /*......*/
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					3、/**......*/，这种方式和第二种方式相似。这种格式是为了便于javadoc程序自动生成文档。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					下面介绍一下Javadoc的标记：
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table border="1" align="left" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>JavaDoc标记</td>
+							<td>解释</td>
+						</tr>
+						<tr>
+							<td>@version</td>
+							<td>指定版本信息</td>
+						</tr>
+						<tr>
+							<td>@since</td>
+							<td>指定最早出现在哪个版本</td>
+						</tr>
+						<tr>
+							<td>@author</td>
+							<td>指定作者</td>
+						</tr>
+						<tr>
+							<td>@see</td>
+							<td>生成参考其他的JavaDoc文档的连接</td>
+						</tr>
+						<tr>
+							<td>@link</td>
+							<td>生成参考其他的JavaDoc文档，它和@see标记的区别在于，@link标记能够嵌入到注释语句中，为注释语句中的特殊词汇生成连接。  eg.{@link Hello}</td>
+						</tr>
+						<tr>
+							<td>@deprecated</td>
+							<td>用来注明被注释的类、变量或方法已经不提倡使用，在将来的版本中有可能被废弃</td>
+						</tr>
+						<tr>
+							<td>@param</td>
+							<td>描述方法的参数</td>
+						</tr>
+						<tr>
+							<td>@return</td>
+							<td>描述方法的返回值</td>
+						</tr>
+						<tr>
+							<td>@throws</td>
+							<td>描述方法抛出的异常，指明抛出异常的条件</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize color_red">
+					特别声明：
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					（1）javadoc针对public类生成注释文档
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					（2）javadoc只能在public、protected修饰的方法或者属性之上				
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					（3）javadoc注释的格式化：前导*号和HTML标签
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					（4）javadoc注释要仅靠在类、属性、方法之前
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize">
+					标识符的注意事项及命名规则
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					定义：就是给类，接口，方法，变量等起名字的字符序列
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					组成规则
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					1.英文大小写字母
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					2.数字
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					3.$和_
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					注意事项
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					1.不能以数字开头
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					2.不能是java中的关键字
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					3.区分大小写
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					常见的命名规则(见名知意)
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					1.包全部小写
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					单级包：小写 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：liuyi,com
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					多级包：小写，并用.隔开 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：cn.itcast,com.baidu
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					2.类或者接口
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					一个单词：首字母大写 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：Student,Demo
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					多个单词：每个单词首字母大写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：HelloWorld,StudentName
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					3.方法或者变量
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					一个单词：首字母小写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：name,main
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					多个单词：从第二个单词开始，每个单词首字母大写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：studentAge,showAllNames()
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					4.常量
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					全部大写
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					一个单词：大写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：PI
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					多个单词：大写，并用_隔开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举例：STUDENT_MAX_AGE
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
