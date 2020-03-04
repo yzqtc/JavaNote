@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>递归</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-04
+        	描述：递归
+        -->
+        <center>
+			<h1>递归</h1>  
+        </center>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">递归</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					递归是一种常见的解决问题的方法，即把问题逐渐简单化。递归的基本思想就是“自己调用自己”，一个使用递归技术的方法将会直接或者间接的调用自己
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					 利用递归可以用简单的程序来解决一些复杂的问题。比如：斐波那契数列的计算、汉诺塔、快排等问题
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					递归结构包括两个部分:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string right_2">
+					(1).定义递归头
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string right_2">
+					(2).递归体
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例1]递归：计算n:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>public class Test1 {</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td class="right_2">long d1 = System.currentTimeMillis();</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td class="right_2">System.out.printf("%d阶乘的结果:%s%n", 10, factorial(10));</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td class="right_2">long d2 = System.currentTimeMillis();</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td class="right_2">System.out.printf("递归费时：%s%n", d2-d1);  //耗时：32ms</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td class="right_1">/** 求阶乘的方法*/</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td class="right_1">static long  factorial(int n){</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td class="right_2">if(n==1){//递归头</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td class="right_3">return 1;</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td class="right_2">}else{//递归体</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td class="right_3">return n*factorial(n-1);//n! = n * (n-1)!</td>
+						</tr>
+						<tr>
+							<td>13</td>
+							<td class="right_2">}</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.4_1.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.4_2.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					递归的缺陷:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string right_1">
+					简单的程序是递归的优点之一。但是递归调用会占用大量的系统堆栈，内存耗用多，在递归调用层次多时速度要比循环慢的多，所以在使用递归时要慎重
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string right_1">
+					比如上面的递归耗时558ms。但是用普通循环的话快得多，如示例所示
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例2]使用循环求n:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>public class Test2 {</td>
+						</tr>
+						<tr>
+							<td width="30px">2</td>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td width="30px">3</td>
+							<td class="right_2">long d3 = System.currentTimeMillis();</td>
+						</tr>
+						<tr>
+							<td width="30px">4</td>
+							<td class="right_2">int a = 10;</td>
+						</tr>
+						<tr>
+							<td width="30px">5</td>
+							<td class="right_2">int result = 1;</td>
+						</tr>
+						<tr>
+							<td width="30px">6</td>
+							<td class="right_2">while (a > 1) {</td>
+						</tr>
+						<tr>
+							<td width="30px">7</td>
+							<td class="right_3">result *= a * (a - 1);</td>
+						</tr>
+						<tr>
+							<td width="30px">8</td>
+							<td class="right_3">a -= 2;</td>
+						</tr>
+						<tr>
+							<td width="30px">9</td>
+							<td class="right_2">}</td>
+						</tr>
+						<tr>
+							<td width="30px">10</td>
+							<td class="right_2">long d4 = System.currentTimeMillis();</td>
+						</tr>
+						<tr>
+							<td width="30px">11</td>
+							<td class="right_2">System.out.println(result);</td>
+						</tr>
+						<tr>
+							<td width="30px">12</td>
+							<td class="right_2">System.out.printf("普通循环费时：%s%n", d4 - d3);</td>
+						</tr>
+						<tr>
+							<td width="30px">13</td>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td width="30px">14</td>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.4_3.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					注意事项:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string right_2">
+					任何能用递归解决的问题也能使用迭代解决。当递归方法可以更加自然地反映问题，并且易于理解和调试，并且不强调效率问题时，可以采用递归
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string right_2">
+					[在要求高性能的情况下尽量避免使用递归，递归调用既花时间又耗内存
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

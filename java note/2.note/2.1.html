@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>语句块</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-04
+        	描述：语句块
+        -->
+        <center>
+			<h1>语句块</h1>  
+        </center>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">语句块</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					语句块(有时叫做复合语句)，是用花括号扩起的任意数量的简单Java语句。块确定了局部变量的作用域。块中的程序代码，作为一个整体，是要被一起执行的。块可以被嵌套在另一个块中，但是不能在两个嵌套的块内声明同名的变量。语句块可以使用外部的变量，而外部不能使用语句块中定义的变量，因为语句块中定义的变量作用域只限于语句块
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例1]语句块:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td width="30px">1</td>
+							<td>public class Test1 {</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td class="right_2">int n;</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td class="right_2">int a;</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td class="right_2">{</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td class="right_3">int k;</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td class="right_3">int n; //编译错误：不能重复定义变量n</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td class="right_2">}//变量k的作用域到此为止</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>
