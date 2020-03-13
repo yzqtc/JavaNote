@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>垃圾回收机制</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-12
+        	描述：垃圾回收机制
+        -->
+        <center>
+			<h1>垃圾回收机制(Garbage Collection)</h1>  
+        </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#1">1.概念 </a></li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#2">2.垃圾回收原理和算法 </a></li>
+        	</ul>
+        </div>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">概念</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Java引入了垃圾回收机制，令C++程序员最头疼的内存管理问题迎刃而解。Java程序员可以将更多的精力放到业务逻辑上而不是内存管理工作上，大大的提高了开发效率。
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">垃圾回收原理和算法</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					1.内存管理
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					Java的内存管理很大程度指的就是对象的管理，其中包括对象空间的分配和释放。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					对象空间的分配:使用new关键字创建对象即可
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					对象空间的释放:将对象赋值null即可。垃圾回收器将负责回收所有”不可达”对象的内存空间。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					2.垃圾回收过程
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					任何一种垃圾回收算法一般要做两件基本事情:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_2">
+					(1).发现无用的对象
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_2">
+					(2).回收无用对象占用的内存空间
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_2">
+					垃圾回收机制保证可以将"无用的对象"进行回收。无用的对象指的就是没有任何变量引用该对象。Java的垃圾回收器通过相关算法发现无用对象，并进行清除和整理
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					3.垃圾回收相关算法
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					(1).引用计数法
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					堆中每个对象都有一个引用计数。被引用一次，计数加1. 被引用变量值变为null，则计数减1，直到计数为0，则表示变成无用对象。优点是算法简单，缺点是“循环引用的无用对象”无法别识别。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]循环引用示例
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>public class Student {</td>
+						</tr>
+						<tr>
+							<td class="right_1">String name;</td>
+						</tr>
+						<tr>
+							<td class="right_1">Student friend;</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">Student s1 = new Student();</td>
+						</tr>
+						<tr>
+							<td class="right_2">Student s2 = new Student();</td>
+						</tr>
+						<tr>
+							<td class="right_2">s1.friend = s2;</td>
+						</tr>
+						<tr>
+							<td class="right_2">s2.friend = s1;</td>
+						</tr>
+						<tr>
+							<td class="right_2">s1 = null;</td>
+						</tr>
+						<tr>
+							<td class="right_2">s2 = null;</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					s1和s2互相引用对方，导致他们引用计数不为0，但是实际已经无用，但无法被识别。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(2).引用可达法(根搜索算法)
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					程序把所有的引用关系看作一张图，从一个节点GC ROOT开始，寻找对应的引用节点，找到这个节点以后，继续寻找这个节点的引用节点，当所有的引用节点寻找完毕之后，剩余的节点则被认为是没有被引用到的节点，即无用的节点。
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

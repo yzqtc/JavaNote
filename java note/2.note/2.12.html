@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>内存泄漏</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-13
+        	描述：内存泄漏
+        -->
+        <center>
+			<h1>内存泄漏</h1>  
+        </center>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">如下四种情况时最容易造成内存泄露的场景:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					1.创建大量无用对象
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					比如，我们在需要大量拼接字符串时，使用了String而不是StringBuilder。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>String str = "";</td>
+						</tr>
+						<tr>
+							<td>for (int i = 0; i < 10000; i++) {</td>
+						</tr>
+						<tr>
+							<td class="right_1">str += i;     //相当于产生了10000个String对象</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					2.静态集合类的使用
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					像HashMap、Vector、List等的使用最容易出现内存泄露，这些静态变量的生命周期和应用程序一致，所有的对象Object也不能被释放。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					3.各种连接对象(IO流对象、数据库连接对象、网络连接对象)未关闭
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					IO流对象、数据库连接对象、网络连接对象等连接对象属于物理连接，和硬盘或者网络连接，不使用的时候一定要关闭。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					4.监听器的使用
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					释放对象时，没有删除相应的监听器。
+				</li>					
+			</ul>
+			<ul>
+				<li class="fontsize thick">要点:</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(1).程序员无权调用垃圾回收器。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(2).程序员可以调用System.gc()，该方法只是通知JVM，并不是运行垃圾回收器。尽量少用，会申请启动Full GC，成本高，影响系统性能。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					(3).finalize方法，是Java提供给程序员用来释放对象或资源的方法，但是尽量少用。
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

@@ -52,67 +52,51 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test1 {</td>
 						</tr>
 						<tr>
-							<td>2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td>3</td>
 							<td class="right_2">long d1 = System.currentTimeMillis();</td>
 						</tr>
 						<tr>
-							<td>4</td>
 							<td class="right_2">System.out.printf("%d阶乘的结果:%s%n", 10, factorial(10));</td>
 						</tr>
 						<tr>
-							<td>5</td>
 							<td class="right_2">long d2 = System.currentTimeMillis();</td>
 						</tr>
 						<tr>
-							<td>6</td>
 							<td class="right_2">System.out.printf("递归费时：%s%n", d2-d1);  //耗时：32ms</td>
 						</tr>
 						<tr>
-							<td>7</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td>7</td>
 							<td class="right_1">/** 求阶乘的方法*/</td>
 						</tr>
 						<tr>
-							<td>8</td>
 							<td class="right_1">static long  factorial(int n){</td>
 						</tr>
 						<tr>
-							<td>9</td>
 							<td class="right_2">if(n==1){//递归头</td>
 						</tr>
 						<tr>
-							<td>10</td>
 							<td class="right_3">return 1;</td>
 						</tr>
 						<tr>
-							<td>11</td>
 							<td class="right_2">}else{//递归体</td>
 						</tr>
 						<tr>
-							<td>12</td>
 							<td class="right_3">return n*factorial(n-1);//n! = n * (n-1)!</td>
 						</tr>
 						<tr>
-							<td>13</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td>14</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td>15</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -152,59 +136,45 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test2 {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td class="right_2">long d3 = System.currentTimeMillis();</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_2">int a = 10;</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td class="right_2">int result = 1;</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td class="right_2">while (a > 1) {</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td class="right_3">result *= a * (a - 1);</td>
 						</tr>
 						<tr>
-							<td width="30px">8</td>
 							<td class="right_3">a -= 2;</td>
 						</tr>
 						<tr>
-							<td width="30px">9</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">10</td>
 							<td class="right_2">long d4 = System.currentTimeMillis();</td>
 						</tr>
 						<tr>
-							<td width="30px">11</td>
 							<td class="right_2">System.out.println(result);</td>
 						</tr>
 						<tr>
-							<td width="30px">12</td>
 							<td class="right_2">System.out.printf("普通循环费时：%s%n", d4 - d3);</td>
 						</tr>
 						<tr>
-							<td width="30px">13</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td width="30px">14</td>
 							<td>}</td>
 						</tr>
 					</table>

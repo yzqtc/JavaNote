@@ -38,15 +38,12 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>if(布尔表达式){</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">语句块</td>
 						</tr>
 						<tr>
-							<td>3</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -71,91 +68,69 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test1 {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td class="right_2"> //通过掷三个骰子看看今天的手气如何？</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_2">int i = (int)(6 * Math.random()) + 1;//通过Math.random()产生随机数</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td class="right_2">int j = (int)(6 * Math.random()) + 1;</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td class="right_2">int k = (int)(6 * Math.random()) + 1;</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td class="right_2">int count = i + j + k;</td>
 						</tr>
 						<tr>
-							<td width="30px">8</td>
 							<td class="right_2">//如果三个骰子之和大于15，则手气不错</td>
 						</tr>
 						<tr>
-							<td width="30px">9</td>
 							<td class="right_2">if(count > 15) {</td>
 						</tr>
 						<tr>
-							<td width="30px">10</td>
 							<td class="right_3">System.out.println("今天手气不错");</td>
 						</tr>
 						<tr>
-							<td width="30px">11</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">12</td>
 							<td class="right_2">//如果三个骰子之和在10到15之间，则手气一般</td>
 						</tr>
 						<tr>
-							<td width="30px">13</td>
 							<td class="right_2">if(count >= 10 && count <= 15) { //错误写法：10<=count<=15</td>
 						</tr>
 						<tr>
-							<td width="30px">14</td>
 							<td class="right_3">System.out.println("今天手气很一般");</td>
 						</tr>
 						<tr>
-							<td width="30px">15</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">16</td>
 							<td class="right_2">//如果三个骰子之和小于10，则手气不怎么样</td>
 						</tr>
 						<tr>
-							<td width="30px">17</td>
 							<td class="right_2">if(count < 10) {</td>
 						</tr>
 						<tr>
-							<td width="30px">18</td>
 							<td class="right_3">System.out.println("今天手气不怎么样");</td>
 						</tr>
 						<tr>
-							<td width="30px">19</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">20</td>
 							<td class="right_2">System.out.println("得了" + count + "分");</td>
 						</tr>
 						<tr>
-							<td width="30px">21</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td width="30px">22</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -178,23 +153,18 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>if(布尔表达式){</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">语句块1</td>
 						</tr>
 						<tr>
-							<td>3</td>
 							<td>}else{</td>
 						</tr>
 						<tr>
-							<td>4</td>
 							<td class="right_1">语句块1</td>
 						</tr>
 						<tr>
-							<td>5</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -219,75 +189,57 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test2 {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td class="right_2">//随机产生一个[0.0, 4.0)区间的半径，并根据半径求圆的面积和周长</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_2">double r = 4 * Math.random();</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td class="right_2">//Math.pow(r, 2)求半径r的平方</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td class="right_2">double area = Math.PI * Math.pow(r, 2);</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td class="right_2">double circle = 2 * Math.PI * r;</td>
 						</tr>
 						<tr>
-							<td width="30px">8</td>
 							<td class="right_2">System.out.println("半径为： " + r);</td>
 						</tr>
 						<tr>
-							<td width="30px">9</td>
 							<td class="right_2">System.out.println("面积为： " + area);</td>
 						</tr>
 						<tr>
-							<td width="30px">10</td>
 							<td class="right_2">System.out.println("周长为： " + circle);</td>
 						</tr>
 						<tr>
-							<td width="30px">11</td>
 							<td class="right_2">//如果面积>=周长，则输出"面积大于等于周长"，否则，输出周长大于面积</td>
 						</tr>
 						<tr>
-							<td width="30px">12</td>
 							<td class="right_2">if(area >= circle) {</td>
 						</tr>
 						<tr>
-							<td width="30px">13</td>
 							<td class="right_3">System.out.println("面积大于等于周长");</td>
 						</tr>
 						<tr>
-							<td width="30px">14</td>
 							<td class="right_2">} else {</td>
 						</tr>
 						<tr>
-							<td width="30px">15</td>
 							<td class="right_3">System.out.println("周长大于面积");</td>
 						</tr>
 						<tr>
-							<td width="30px">16</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">17</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td width="30px">18</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -312,47 +264,36 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test3 {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td class="right_2">int a=2;</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_2">int b=3;</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td class="right_2">if (a<b) {</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td class="right_3">System.out.println(a);</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td class="right_2">} else {</td>
 						</tr>
 						<tr>
-							<td width="30px">8</td>
 							<td class="right_3">System.out.println(b);</td>
 						</tr>
 						<tr>
-							<td width="30px">9</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">10</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td width="30px">11</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -372,31 +313,24 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test4 {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td class="right_2">int a=2;</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_2">int b=3;</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td class="right_2">System.out.println( (a < b) ? a : b);</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -419,43 +353,33 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>if(布尔表达式1){</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">语句块1</td>
 						</tr>
 						<tr>
-							<td>3</td>
 							<td>} else if(布尔表达式2) {</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_1">语句块2</td>
 						</tr>
 						<tr>
-							<td>5</td>
 							<td>}……</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td>else if(布尔表达式n){</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td class="right_1">语句块n</td>
 						</tr>
 						<tr>
-							<td>8</td>
 							<td>} else {</td>
 						</tr>
 						<tr>
-							<td width="30px">9</td>
 							<td class="right_1">语句块n+1</td>
 						</tr>
 						<tr>
-							<td>10</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -480,79 +404,60 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test5 {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td class="right_2">int age = (int) (100 * Math.random());</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_2">System.out.print("年龄是" + age + "， 属于");</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td class="right_2"> if (age < 15) {</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td class="right_3">System.out.println("儿童， 喜欢玩！");</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td class="right_2">} else if (age < 25) {</td>
 						</tr>
 						<tr>
-							<td width="30px">8</td>
 							<td class="right_3">System.out.println("青年， 要学习！");</td>
 						</tr>
 						<tr>
-							<td width="30px">9</td>
 							<td class="right_2">} else if (age < 45) {</td>
 						</tr>
 						<tr>
-							<td width="30px">10</td>
 							<td class="right_3">System.out.println("中年， 要工作！");</td>
 						</tr>
 						<tr>
-							<td width="30px">11</td>
 							<td class="right_2">} else if (age < 65) {</td>
 						</tr>
 						<tr>
-							<td width="30px">12</td>
 							<td class="right_3">System.out.println("中老年， 要补钙！");</td>
 						</tr>
 						<tr>
-							<td width="30px">13</td>
 							<td class="right_2">} else if (age < 85) {</td>
 						</tr>
 						<tr>
-							<td width="30px">14</td>
 							<td class="right_3">System.out.println("老年， 多运动！");</td>
 						</tr>
 						<tr>
-							<td width="30px">15</td>
 							<td class="right_2">} else {</td>
 						</tr>
 						<tr>
-							<td width="30px">16</td>
 							<td class="right_3">System.out.println("老寿星， 古来稀！");</td>
 						</tr>
 						<tr>
-							<td width="30px">17</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">18</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td width="30px">19</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -580,47 +485,36 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>switch (表达式) {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td>case 值1:</td>
 						</tr>
 						<tr>
-							<td>3</td>
 							<td>语句序列1</td>
 						</tr>
 						<tr>
-							<td>4</td>
 							<td>[break]</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td>case 值2:</td>
 						</tr>
 						<tr>
-							<td>6</td>
 							<td>语句序列2</td>
 						</tr>
 						<tr>
-							<td>7</td>
 							<td>[break]</td>
 						</tr>
 						<tr>
-							<td>8</td>
 							<td>… …</td>
 						</tr>
 						<tr>
-							<td>9</td>
 							<td>[default:</td>
 						</tr>
 						<tr>
-							<td>10</td>
 							<td>默认语句]</td>
 						</tr>
 						<tr>
-							<td>11</td>
 							<td>}</td>
 						</tr>
 					</table>
@@ -660,95 +554,72 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>public class Test6 {</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td class="right_1">public static void main(String[] args) {</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td class="right_2">char c = 'a';</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td class="right_2">int rand = (int) (26 * Math.random());</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td class="right_2">char c2 = (char) (c + rand);</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td class="right_2">System.out.print(c2 + ": ");</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td class="right_2">switch (c2) {</td>
 						</tr>
 						<tr>
-							<td width="30px">8</td>
 							<td class="right_2">case 'a':</td>
 						</tr>
 						<tr>
-							<td width="30px">9</td>
 							<td class="right_2">case 'e':</td>
 						</tr>
 						<tr>
-							<td width="30px">10</td>
 							<td class="right_2">case 'i':</td>
 						</tr>
 						<tr>
-							<td width="30px">11</td>
 							<td class="right_2">case 'o':</td>
 						</tr>
 						<tr>
-							<td width="30px">12</td>
 							<td class="right_2">case 'u':</td>
 						</tr>
 						<tr>
-							<td width="30px">13</td>
 							<td class="right_3">System.out.println("元音");</td>
 						</tr>
 						<tr>
-							<td width="30px">14</td>
 							<td class="right_3">break;</td>
 						</tr>
 						<tr>
-							<td width="30px">15</td>
 							<td class="right_2">case 'y':</td>
 						</tr>
 						<tr>
-							<td width="30px">16</td>
 							<td class="right_2">case 'w':</td>
 						</tr>
 						<tr>
-							<td width="30px">17</td>
 							<td class="right_3">System.out.println("半元音");</td>
 						</tr>
 						<tr>
-							<td width="30px">18</td>
 							<td class="right_3">break;</td>
 						</tr>
 						<tr>
-							<td width="30px">19</td>
 							<td class="right_2">default:</td>
 						</tr>
 						<tr>
-							<td width="30px">20</td>
 							<td class="right_3">System.out.println("辅音");</td>
 						</tr>
 						<tr>
-							<td width="30px">21</td>
 							<td class="right_2">}</td>
 						</tr>
 						<tr>
-							<td width="30px">22</td>
 							<td class="right_1">}</td>
 						</tr>
 						<tr>
-							<td width="30px">23</td>
 							<td>}</td>
 						</tr>
 					</table>

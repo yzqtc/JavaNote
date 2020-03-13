@@ -14,6 +14,15 @@
         <center>
 			<h1>对象和类的概念</h1>  
         </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#1">1.对象和类的概念</a></li>
+        		<li class="fontsize_1 null_string"><a href="#2">2.类的定义 </a></li>
+        	</ul>
+        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">对象和类的概念</li>					
@@ -41,6 +50,102 @@
 			<ul class="ul">
 				<li class="fontsize null_string right_2">
 					(3).类是用于描述同一类型的对象的一个抽象概念，类中定义了这一类对象所应具有的共同的属性、方法
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">类的定义</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例1]类的定义方式:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>// 每一个源文件必须有且只有一个public class，并且类名和文件名保持一致！</td>
+						</tr>
+						<tr>
+							<td>public class Car {</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Tyre { // 一个Java文件可以同时定义多个class</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Engine {</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Seat {</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					上面的类定义好后，没有任何的其他信息，就跟我们拿到一张张图纸，但是纸上没有任何信息，这是一个空类，没有任何实际意义。所以，我们需要定义类的具体信息。对于一个类来说，一般有三种常见的成员：属性field、方法method、构造器constructor。这三种成员都可以定义零个或多个
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例2]简单的学生类编写:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>public class SxtStu {</td>
+						</tr>
+						<tr>
+							<td class="right_1">//属性（成员变量）</td>
+						</tr>
+						<tr>
+							<td class="right_1">int id;</td>
+						</tr>
+						<tr>
+							<td class="right_1">String sname;</td>
+						</tr>
+						<tr>
+							<td class="right_1">int age;</td>
+						</tr>
+						<tr>
+							<td class="right_1">//方法</td>
+						</tr>
+						<tr>
+							<td class="right_1">void study(){</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("我正在学习！");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td class="right_1">//构造方法</td>
+						</tr>
+						<tr>
+							<td class="right_1">SxtStu(){</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
 				</li>					
 			</ul>
 		</div>

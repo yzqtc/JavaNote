@@ -150,27 +150,21 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>int a = 3;</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td>int b = a++; //执行完后,b=3。先给b赋值,再自增</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td>System.out.println("a="+a+"\nb="+b); //a=4 b=3</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td>a = 3;</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td>b = ++a; //执行完后，b=4。a先自增,再给b赋值</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td>System.out.println("a="+a+"\nb="+b); //a=4 b=4</td>
 						</tr>
 					</table>
@@ -226,31 +220,24 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>int a = 3;</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td>int b = 4;</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td>a += b; //相当于a=a+b;</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td>System.out.println("a="+a+"\nb="+b); //a=7 b=4</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td>a = 3;</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td>a *= b+3; //相当于a=a*(b+3);</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td>System.out.println("a="+a+"\nb="+b); //a=21 b=4</td>
 						</tr>
 					</table>
@@ -385,27 +372,21 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>//1 > 2的结果为false，那么整个表达式的结果即为false，将不再计算2 > (3/0)</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td>boolean c = 1 > 2 && 2 > (3/0);</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td>System.out.println(c);</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td>//1 > 2的结果为false，那么整个表达式的结果即为false，还要计算2 > (3/0)，0不能负除数，会输出异常信息</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td>boolean d = 1 > 2 & 2 > (3/0);</td>
 						</tr>
 						<tr>
-							<td width="30px">7</td>
 							<td>System.out.println(d);</td>
 						</tr>
 					</table>
@@ -464,19 +445,15 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>int a = 3*2*2;</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td>int b = 3 << 2;//相当于3*2*2</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td>int c = 12/2/2;</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td>int d = 12 >> 2;//相当于12/2/2</td>
 						</tr>
 					</table>
@@ -510,11 +487,9 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>int a = 12;</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td>System.out.println("a="+a);//输出结果a=12</td>
 						</tr>
 					</table>
@@ -532,7 +507,6 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>x ? y : z</td>
 						</tr>
 					</table>
@@ -552,27 +526,21 @@
 				<li class="fontsize">
 					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
 						<tr>
-							<td width="30px">1</td>
 							<td>int score = 80;</td>
 						</tr>
 						<tr>
-							<td width="30px">2</td>
 							<td>int x = -100;</td>
 						</tr>
 						<tr>
-							<td width="30px">3</td>
 							<td>String type = score < 60 ? "不及格" : "及格";</td>
 						</tr>
 						<tr>
-							<td width="30px">4</td>
 							<td>int flag = x > 0 ? 1 : (x == 0 ? 0 : -1);</td>
 						</tr>
 						<tr>
-							<td width="30px">5</td>
 							<td>System.out.println("type="+type);//type=及格</td>
 						</tr>
 						<tr>
-							<td width="30px">6</td>
 							<td>System.out.println("flag="+flag);//flag=-1</td>
 						</tr>
 					</table>
