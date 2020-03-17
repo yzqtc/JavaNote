@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>静态初始化块</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-17
+        	描述：静态初始化块
+        -->
+        <center>
+			<h1>静态初始化块</h1>  
+        </center>
+		<div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					构造方法用于对象的初始化。静态初始化块用于类的初始化操作。在静态初始化块中不能直接访问非static成员。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					注意事项:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.上溯到Object类，先执行Object的静态初始化块，再向下执行子类的静态初始化块，直到我们的类的静态初始化块为止。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.构造方法执行顺序和上面顺序一样。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]static初始化块:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>public class User {</td>
+						</tr>
+						<tr>
+							<td class="right_1">int id; // id</td>
+						</tr>
+						<tr>
+							<td class="right_1">String name; // 账户名</td>
+						</tr>
+						<tr>
+							<td class="right_1">String pwd;   //密码</td>
+						</tr>
+						<tr>
+							<td class="right_1">static String company // 公司名称</td>
+						</tr>
+						<tr>
+							<td class="right_1">static {</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("执行类的初始化工作");</td>
+						</tr>
+						<tr>
+							<td class="right_2">company = "阿里巴巴";</td>
+						</tr>
+						<tr>
+							<td class="right_2">printCompany();</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void printCompany(){</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println(company);</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">User  u = new User();</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					<img src="../img/2.15_1.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

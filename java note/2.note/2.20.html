@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>方法的重写override</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-17
+        	描述：方法的重写override
+        -->
+        <center>
+			<h1>方法的重写override</h1>  
+        </center>
+		<div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					子类通过重写父类的方法，可以用自身的行为替换父类的行为。方法的重写是实现多态的必要条件。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					方法的重写需要符合下面的三个要点:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.方法名、形参列表相同。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.返回值类型和声明异常类型相同或者是其子类。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3.访问权限，子类不能严于父类。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]方法重写:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>public class TestOverride {</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">Vehicle v1 = new Vehicle();</td>
+						</tr>
+						<tr>
+							<td class="right_2">Vehicle v2 = new Horse();</td>
+						</tr>
+						<tr>
+							<td class="right_2">Vehicle v3 = new Plane();</td>
+						</tr>
+						<tr>
+							<td class="right_2">v1.run();</td>
+						</tr>
+						<tr>
+							<td class="right_2">v2.run();</td>
+						</tr>
+						<tr>
+							<td class="right_2">v3.run();</td>
+						</tr>
+						<tr>
+							<td class="right_2">v2.stop();</td>
+						</tr>
+						<tr>
+							<td class="right_2">v3.stop();</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Vehicle { // 交通工具类</td>
+						</tr>
+						<tr>
+							<td class="right_1">public void run() {</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("跑....");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td class="right_1">public void stop() {</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("停止不动");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Horse extends Vehicle { // 马也是交通工具</td>
+						</tr>
+						<tr>
+							<td class="right_1">public void run() { // 重写父类方法</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("四蹄翻飞，嘚嘚嘚...");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Plane extends Vehicle {</td>
+						</tr>
+						<tr>
+							<td class="right_1">public void run() { // 重写父类方法</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("天上飞！");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td class="right_1">public void stop() {</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("空中不能停，坠毁了！");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.19_1.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>继承</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-17
+        	描述：继承
+        -->
+        <center>
+			<h1>继承</h1>  
+        </center>
+		<div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					继承让我们更加容易实现类的扩展。 比如，我们定义了人类，再定义Boy类就只需要扩展人类即可。实现了代码的重用。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					从英文字面意思理解，extends的意思是“扩展”。子类是父类的扩展。现实世界中的继承无处不在。比如:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.19_2.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					上图中，哺乳动物继承了动物。意味着，动物的特性，哺乳动物都有；在我们编程中，如果新定义一个Student类，发现已经有Person类包含了我们需要的属性和方法，那么Student类只需要继承Person类即可拥有Person类的属性和方法。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]使用extends实现继承:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>public class Test{</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">Student s = new Student("ywh",172,"Java");</td>
+						</tr>
+						<tr>
+							<td class="right_2">s.rest();</td>
+						</tr>
+						<tr>
+							<td class="right_2">s.study();</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Person {</td>
+						</tr>
+						<tr>
+							<td class="right_1">String name;</td>
+						</tr>
+						<tr>
+							<td class="right_1">int height;</td>
+						</tr>
+						<tr>
+							<td class="right_1">public void rest(){</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("休息一会！");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>class Student extends Person {</td>
+						</tr>
+						<tr>
+							<td class="right_1">String major; //专业</td>
+						</tr>
+						<tr>
+							<td class="right_1">public void study(){</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("正在学习Java");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td class="right_1">public Student(String name,int height,String major) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">//天然拥有父类的属性</td>
+						</tr>
+						<tr>
+							<td class="right_2">this.name = name;</td>
+						</tr>
+						<tr>
+							<td class="right_2">this.height = height;</td>
+						</tr>
+						<tr>
+							<td class="right_2">this.major = major;</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.19_3.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

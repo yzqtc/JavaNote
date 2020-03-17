@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Object类</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-17
+        	描述：Object类
+        -->
+        <center>
+			<h1>Object类</h1>  
+        </center>
+        <div>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string thick">目录:</li>
+        	</ul>
+        	<ul class="ul">
+        		<li class="fontsize_1 null_string"><a href="#1">1.Object类基本特性</a></li>
+        		<li class="fontsize_1 null_string"><a href="#2">2.toString方法 </a></li>
+        	</ul>
+        </div>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">Object类基本特性</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Object类是所有Java类的根基类，也就意味着所有的Java对象都拥有Object类的属性和方法。如果在类的声明中未使用extends关键字指明其父类，则默认继承Object类。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]Object类:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>public class Person {</td>
+						</tr>
+						<tr>
+							<td class="right_1">...</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>//等价于:</td>
+						</tr>
+						<tr>
+							<td>public class Person extends Object {</td>
+						</tr>
+						<tr>
+							<td class="right_1">...</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">toString方法</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Object类中定义有public String toString()方法，其返回值是 String 类型。Object类中toString方法的源码为:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>public String toString() {</td>
+						</tr>
+						<tr>
+							<td class="right_1">return getClass().getName() + "@" + Integer.toHexString(hashCode());</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					根据如上源码得知，默认会返回“类名+@+16进制的hashcode”。在打印输出或者用字符串连接对象时，会自动调用该对象的toString()方法。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]toString()方法测试和重写toString()方法:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>class Person {</td>
+						</tr>
+						<tr>
+							<td class="right_1">String name;</td>
+						</tr>
+						<tr>
+							<td class="right_1">int age;</td>
+						</tr>
+						<tr>
+							<td class="right_1">@Override</td>
+						</tr>
+						<tr>
+							<td class="right_1">public String toString() {</td>
+						</tr>
+						<tr>
+							<td class="right_2">return name+",年龄："+age;</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+						<tr>
+							<td>public class Test {</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">Person p=new Person();</td>
+						</tr>
+						<tr>
+							<td class="right_2">p.age=20;</td>
+						</tr>
+						<tr>
+							<td class="right_2">p.name="李东";</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("info:"+p);</td>
+						</tr>
+						<tr>
+							<td class="right_2">Test t = new Test();</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println(t);</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.20_1.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

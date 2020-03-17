@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>导入类import</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-17
+        	描述：导入类import
+        -->
+        <center>
+			<h1>导入类import</h1>  
+        </center>
+		<div>
+			<ul>
+				<li class="fontsize null_string thick">
+					import导入
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					如果我们要使用其他包的类，需要使用import导入，从而可以在本类中直接通过类名来调用，否则就需要书写类的完整包名和类名。import后，便于编写代码，提高可维护性。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					注意要点:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.Java会默认导入java.lang包下所有的类，因此这些类我们可以直接使用。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.如果导入两个同名的类，只能用包名+类名来显示调用相关类:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>java.util.Date date  = new  java.util.Date();</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]导入同名类的处理:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>import java.sql.Date;</td>
+						</tr>
+						<tr>
+							<td>import java.util.*;//导入该包下所有的类。会降低编译速度，但不会降低运行速度。</td>
+						</tr>
+						<tr>
+							<td>public class Test{</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">//这里指的是java.sql.Date</td>
+						</tr>
+						<tr>
+							<td class="right_2">Date now;</td>
+						</tr>
+						<tr>
+							<td class="right_2">//java.util.Date因为和java.sql.Date类同名，需要完整路径</td>
+						</tr>
+						<tr>
+							<td class="right_2">java.util.Date  now2 = new java.util.Date();</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println(now2);</td>
+						</tr>
+						<tr>
+							<td class="right_2">//java.util包的非同名类不需要完整路径</td>
+						</tr>
+						<tr>
+							<td class="right_2">Scanner input = new Scanner(System.in);</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul>
+				<li class="fontsize null_string thick">
+					静态导入
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					静态导入(static import)是在JDK1.5新增加的功能，其作用是用于导入指定类的静态属性，这样我们可以直接使用静态属性。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]静态导入的使用:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>package cn.sxt;</td>
+						</tr>
+						<tr>
+							<td>//以下两种静态导入的方式二选一即可</td>
+						</tr>
+						<tr>
+							<td>import static java.lang.Math.*;//导入Math类的所有静态属性</td>
+						</tr>
+						<tr>
+							<td>import static java.lang.Math.PI;//导入Math类的PI属性</td>
+						</tr>
+						<tr>
+							<td>public class Test{</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println(PI);</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println(random());</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.18_1.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

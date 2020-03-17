@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Java包机制</title>
+	</head>
+	<link href="../css/java note.css" rel="stylesheet" />
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-17
+        	描述：Java包机制
+        -->
+        <center>
+			<h1>Java包机制</h1>  
+        </center>
+		<div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					包机制是Java中管理类的重要手段。 开发中，我们会遇到大量同名的类，通过包我们很容易对解决类重名的问题，也可以实现对类的有效管理。 包对于类，相当于文件夹对于文件的作用。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					我们通过package实现对类的管理，package的使用有两个要点:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.通常是类的第一句非注释性语句。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.包名:域名倒着写即可，再加上模块名，便于内部管理类。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]package的命名举例:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>com.sun.test;</td>
+						</tr>
+						<tr>
+							<td>com.oracle.test;</td>
+						</tr>
+						<tr>
+							<td>cn.sxt.gao.test;</td>
+						</tr>
+						<tr>
+							<td>cn.sxt.gao.view;</td>
+						</tr>
+						<tr>
+							<td>cn.sxt.gao.view.model;</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					注意事项:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.写项目时都要加包，不要使用默认包。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.com.gao和com.gao.car，这两个包没有包含关系，是两个完全独立的包。只是逻辑上看起来后者是前者的一部分。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					[示例]package的使用:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
+						<tr>
+							<td>package cn.sxt;</td>
+						</tr>
+						<tr>
+							<td>public class Test {</td>
+						</tr>
+						<tr>
+							<td class="right_1">public static void main(String[] args) {</td>
+						</tr>
+						<tr>
+							<td class="right_2">System.out.println("helloworld");</td>
+						</tr>
+						<tr>
+							<td class="right_1">}</td>
+						</tr>
+						<tr>
+							<td>}</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					在eclipse项目中新建包
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					在src目录上单击右键，选择new->package
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_2">
+					<img src="../img/2.17_1.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					在package窗口上输入包名即可
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_2">
+					<img src="../img/2.17_2.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					接下来，我们就可以在包上单击右键，新建类啦!
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					JDK中的主要包
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="1100px" height="150px">
+						<tr align="center">
+							<td colspan="2">JDK中的主要包</td>
+						</tr>
+						<tr align="left">
+							<td width="150px" align="center">Java中的常用包</td>
+							<td align="center">说明</td>
+						</tr>
+						<tr align="left">
+							<td align="center">java.lang</td>
+							<td>包含一些Java语言的核心类，如String、Math、Integer、System和Thread，提供常用功能。</td>
+						</tr>
+						<tr align="left">
+							<td align="center">java.awt</td>
+							<td>包含了构成抽象窗口工具集（abstract window toolkits）的多个类，这些类被用来构建和管理应用程序的图形用户界面(GUI)。</td>
+						</tr>
+						<tr align="left">
+							<td align="center">java.net</td>
+							<td>包含执行与网络相关的操作的类。</td>
+						</tr>
+						<tr align="left">
+							<td align="center">java.io</td>
+							<td>包含能提供多种输入/输出功能的类。</td>
+						</tr>
+						<tr align="left">
+							<td align="center">java.util</td>
+							<td>包含一些实用工具类，如定义系统特性、使用与日期日历相关的函数。</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>
