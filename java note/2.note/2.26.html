@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对象的转型</title>
+	</head>
+	<script type="text/javascript" src="../js/index/import.js"></script>
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-25
+        	描述：对象的转型
+        -->
+        <center>
+			<h1>对象的转型</h1>  
+        </center>
+		<div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					父类引用指向子类对象，我们称这个过程为向上转型，属于自动类型转换。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					向上转型后的父类引用变量只能调用它编译类型的方法，不能调用它运行时类型的方法。这时，我们就需要进行类型的强制转换，我们称之为向下转型
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]对象的转型:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class TestCasting {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Object obj = new String("阿里巴巴"); // 向上可以自动转型</div>
+					<div class="right_2">// obj.charAt(0) 无法调用。编译器认为obj是Object类型而不是String类型</div>
+					<div class="right_2">// 编写程序时，如果想调用运行时类型的方法，只能进行强制类型转换。</div>
+					<div class="right_2">// 不然通不过编译器的检查。</div>
+					<div class="right_2">String str = (String) obj; // 向下转型</div>
+					<div class="right_2">System.out.println(str.charAt(0)); // 位于0索引位置的字符</div>
+					<div class="right_2">System.out.println(obj == str); // true.他们俩运行时是同一个对象</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.26_1.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					在向下转型过程中，必须将引用变量转成真实的子类类型(运行时类型)否则会出现类型转换异常ClassCastException。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]对象的转型:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class TestCasting {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Object obj = new String("阿里巴巴"); // 向上可以自动转型</div>
+					<div class="right_2">//真实的子类类型是String，但是此处向下转型为StringBuffer</div>
+					<div class="right_2">StringBuffer str = (StringBuffer) obj;</div>
+					<div class="right_2">System.out.println(str.charAt(0));</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.26_2.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					为了避免出现这种异常，我们可以使用instanceof运算符进行判断。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]向下转型中使用instanceof:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>public class TestCasting {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Object obj = new String("阿里巴巴"); // 向上可以自动转型</div>
+					<div class="right_2">if(obj instanceof String){</div>
+					<div class="right_3">String str = (String)obj;</div>
+					<div class="right_3">System.out.println(str.charAt(0));</div>
+					<div class="right_2">}else if(obj instanceof StringBuffer){</div>
+					<div class="right_3">StringBuffer str = (StringBuffer) obj;</div>
+					<div class="right_3">System.out.println(str.charAt(0));</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.26_3.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>垃圾回收机制</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,17 +14,6 @@
         <center>
 			<h1>垃圾回收机制(Garbage Collection)</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.概念 </a></li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#2">2.垃圾回收原理和算法 </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">概念</li>					
@@ -38,7 +27,7 @@
 				<li id="2" class="fontsize thick">垃圾回收原理和算法</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					1.内存管理
 				</li>					
 			</ul>
@@ -58,7 +47,7 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					2.垃圾回收过程
 				</li>					
 			</ul>
@@ -83,12 +72,12 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					3.垃圾回收相关算法
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize string_1">
+				<li class="fontsize string_1 thick">
 					(1).引用计数法
 				</li>					
 			</ul>
@@ -99,58 +88,47 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize string_1">
-					[示例]循环引用示例
+					[示例]循环引用示例:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Student {</td>
-						</tr>
-						<tr>
-							<td class="right_1">String name;</td>
-						</tr>
-						<tr>
-							<td class="right_1">Student friend;</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">Student s1 = new Student();</td>
-						</tr>
-						<tr>
-							<td class="right_2">Student s2 = new Student();</td>
-						</tr>
-						<tr>
-							<td class="right_2">s1.friend = s2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">s2.friend = s1;</td>
-						</tr>
-						<tr>
-							<td class="right_2">s1 = null;</td>
-						</tr>
-						<tr>
-							<td class="right_2">s2 = null;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class Student {</div>
+					<div class="right_1">String name;</div>
+					<div class="right_1">Student friend;</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Student s1 = new Student();</div>
+					<div class="right_2">Student s2 = new Student();</div>
+					<div class="right_2">s1.friend = s2;</div>
+					<div class="right_2">s2.friend = s1;</div>
+					<div class="right_2">s1 = null;</div>
+					<div class="right_2">s2 = null;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize string_1">
 					s1和s2互相引用对方，导致他们引用计数不为0，但是实际已经无用，但无法被识别。
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					(2).引用可达法(根搜索算法)
 				</li>					
 			</ul>

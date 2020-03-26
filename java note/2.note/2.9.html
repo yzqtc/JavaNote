@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>面型对象内存分析</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,23 +14,6 @@
         <center>
 			<h1>面型对象内存分析</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.栈 </a></li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#2">2.堆 </a></li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#3">3.方法区(静态区)</a></li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#4">4.内存分析</a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li class="fontsize thick">面型对象内存分析</li>					
@@ -107,111 +90,80 @@
 			<ul>
 				<li id="4" class="fontsize thick">内存分析</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class SxtStu{</td>
-						</tr>
-						<tr>
-							<td class="right_1">//属性</td>
-						</tr>
-						<tr>
-							<td class="right_1">int id;</td>
-						</tr>
-						<tr>
-							<td class="right_1">String sname;</td>
-						</tr>
-						<tr>
-							<td class="right_1">int age;</td>
-						</tr>
-						<tr>
-							<td class="right_1">Computer comp;</td>
-						</tr>
-						<tr>
-							<td class="right_1">//方法</td>
-						</tr>
-						<tr>
-							<td class="right_1">void study(){</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("我要认真学习,使用电脑:"+comp.brand);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">void play(){</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("我在玩游戏!");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">//构造方法,用于创建这个类的对象。无参的构造方法可以由系统自动创建</td>
-						</tr>
-						<tr>
-							<td class="right_1">SxtStu(){</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">//程序执行的入口必须要有</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args){</td>
-						</tr>
-						<tr>
-							<td class="right_2">SxtStu stu = new SxtStu();//创建一个对象</td>
-						</tr>
-						<tr>
-							<td class="right_2">stu.id = 1001;</td>
-						</tr>
-						<tr>
-							<td class="right_2">stu.sname = "ywh";</td>
-						</tr>
-						<tr>
-							<td class="right_2">stu.age = 18;</td>
-						</tr>
-						<tr>
-							<td class="right_2">Computer c1 = new Computer();</td>
-						</tr>
-						<tr>
-							<td class="right_2">c1.brand = "联想";</td>
-						</tr>
-						<tr>
-							<td class="right_2">stu.comp = c1;</td>
-						</tr>
-						<tr>
-							<td class="right_2">stu.play();</td>
-						</tr>
-						<tr>
-							<td class="right_2">stu.study();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Computer{</td>
-						</tr>
-						<tr>
-							<td class="right_1">String brand;</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+					<div class="code_number_border">29</div>
+					<div class="code_number_border">30</div>
+					<div class="code_number_border">31</div>
+					<div class="code_number_border">32</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class SxtStu{</div>
+					<div class="right_1">//属性</div>
+					<div class="right_1">int id;</div>
+					<div class="right_1">String sname;</div>
+					<div class="right_1">int age;</div>
+					<div class="right_1">Computer comp;</div>
+					<div class="right_1">//方法</div>
+					<div class="right_1">void study(){</div>
+					<div class="right_2">System.out.println("我要认真学习,使用电脑:"+comp.brand);</div>
+					<div class="right_1">}</div>
+					<div class="right_1">void play(){</div>
+					<div class="right_2">System.out.println("我在玩游戏!");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">//构造方法,用于创建这个类的对象。无参的构造方法可以由系统自动创建</div>
+					<div class="right_1">SxtStu(){</div>
+					<div class="right_1">}</div>
+					<div class="right_1">//程序执行的入口必须要有</div>
+					<div class="right_1">public static void main(String[] args){</div>
+					<div class="right_2">SxtStu stu = new SxtStu();//创建一个对象</div>
+					<div class="right_2">stu.id = 1001;</div>
+					<div class="right_2">stu.sname = "ywh";</div>
+					<div class="right_2">stu.age = 18;</div>
+					<div class="right_2">Computer c1 = new Computer();</div>
+					<div class="right_2">c1.brand = "联想";</div>
+					<div class="right_2">stu.comp = c1;</div>
+					<div class="right_2">stu.play();</div>
+					<div class="right_2">stu.study();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Computer{</div>
+					<div class="right_1">String brand;</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
-					<img width="2000px" height="1000px" src="../img/2.9_1.png" />
+					<img width="1600px" height="900px" src="../img/2.9_1.png" />
 				</li>					
 			</ul>
 		</div>

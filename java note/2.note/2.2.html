@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>方法</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -15,9 +15,6 @@
 			<h1>方法</h1>  
         </center>
 		<div>
-			<ul>
-				<li id="1" class="fontsize thick">方法</li>					
-			</ul>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					方法就是一段用来完成特定功能的代码片段，类似于其它语言的函数
@@ -29,27 +26,25 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					方法声明格式:
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>[修饰符1  修饰符2  …]   返回值类型    方法名(形式参数列表){</div>
+					<div class="right_1">Java语句；… … …</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>[修饰符1  修饰符2  …]   返回值类型    方法名(形式参数列表){</td>
-						</tr>
-						<tr>
-							<td class="right_1">Java语句；… … …</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					方法的调用方式:
 				</li>					
 			</ul>
@@ -60,26 +55,26 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize null_string right_2">
-					方法的详细说明
+					方法的详细说明:
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_2">
+				<li class="fontsize null_string right_3">
 					(1).形式参数：在方法声明时用于接收外界传入的数据。
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_2">
+				<li class="fontsize null_string right_3">
 					(2).实参：调用方法时实际传给方法的数据。
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_2">
+				<li class="fontsize null_string right_3">
 					(3).返回值：方法在执行完毕后返还给调用它的环境的数据。
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_2">
+				<li class="fontsize null_string right_3">
 					(4).返回值类型：事先约定的返回值的数据类型，如无返回值，必须显示指定为为void。
 				</li>					
 			</ul>
@@ -88,85 +83,63 @@
 					[示例1]方法的声明及调用:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test1 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">/** main方法：程序的入口 */</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int num1 = 10;</td>
-						</tr>
-						<tr>
-							<td class="right_2">int num2 = 20;</td>
-						</tr>
-						<tr>
-							<td class="right_2">//调用求和的方法：将num1与num2的值传给add方法中的n1与n2</td>
-						</tr>
-						<tr>
-							<td class="right_2">// 求完和后将结果返回，用sum接收结果</td>
-						</tr>
-						<tr>
-							<td class="right_2">int sum = add(num1, num2);</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("sum = " + sum);//输出：sum = 30</td>
-						</tr>
-						<tr>
-							<td class="right_2">//调用打印的方法：该方法没有返回值</td>
-						</tr>
-						<tr>
-							<td class="right_2">print();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">/** 求和的方法 */</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static int add(int n1, int n2) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int sum = n1 + n2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">return sum;//使用return返回计算的结果</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">/** 打印的方法 */</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void print() {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("ywh");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class Test1 {</div>
+					<div class="right_1">/** main方法：程序的入口 */</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int num1 = 10;</div>
+					<div class="right_2">int num2 = 20;</div>
+					<div class="right_2">//调用求和的方法：将num1与num2的值传给add方法中的n1与n2</div>
+					<div class="right_2">// 求完和后将结果返回，用sum接收结果</div>
+					<div class="right_2">int sum = add(num1, num2);</div>
+					<div class="right_2">System.out.println("sum = " + sum);//输出：sum = 30</div>
+					<div class="right_2">//调用打印的方法：该方法没有返回值</div>
+					<div class="right_2">print();</div>
+					<div class="right_1">}</div>
+					<div class="right_1">/** 求和的方法 */</div>
+					<div class="right_1">public static int add(int n1, int n2) {</div>
+					<div class="right_2">int sum = n1 + n2;</div>
+					<div class="right_2">return sum;//使用return返回计算的结果</div>
+					<div class="right_1">}</div>
+					<div class="right_1">/** 打印的方法 */</div>
+					<div class="right_1">public static void print() {</div>
+					<div class="right_2">System.out.println("ywh");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/2.2_1.png" />
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string color_red">
 					注意事项:
 				</li>					
 			</ul>

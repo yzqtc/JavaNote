@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>方法重载</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -15,11 +15,8 @@
 			<h1>方法重载</h1>  
         </center>
 		<div>
-			<ul>
-				<li id="1" class="fontsize thick">方法重载</li>					
-			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string color_red">
 					雷区:
 				</li>					
 			</ul>
@@ -29,200 +26,154 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_2">
+				<li class="fontsize null_string null_string thick">
 					构成方法重载的条件:
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_3">
+				<li class="fontsize null_string string_1">
 					(1).不同的含义：形参类型、形参个数、形参顺序不同
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_3">
+				<li class="fontsize null_string string_1">
 					(2).只有返回值不同不构成方法的重载
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_3">
+				<li class="fontsize null_string string_1">
 					如:
 				</li>					
 			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>int a(String str){}与 void a(String str){}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>int a(String str){}与 void a(String str){}</td>
-						</tr>
-					</table>
+				<li class="fontsize null_string thick">
+					不构成方法重载:
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_3">
-					不构成方法重载
+				<li class="fontsize null_string string_1">
+					(1).只有形参的名称不同，不构成方法的重载
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string right_3">
-					(3).只有形参的名称不同，不构成方法的重载
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string right_3">
+				<li class="fontsize null_string string_1">
 					如:
 				</li>					
 			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>int a(String str){}与int a(String s){}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>int a(String str){}与int a(String s){}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string right_3">
-					不构成方法重载
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					[示例1]方法重载:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test1 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(add(3, 5));// 8</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(add(3, 5, 10));// 18</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(add(3.0, 5));// 8.0</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(add(3, 5.0));// 8.0</td>
-						</tr>
-						<tr>
-							<td class="right_2">// 我们已经见过的方法的重载</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println();// 0个参数</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(1);// 参数是1个int</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(3.0);// 参数是1个double</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">/** 求和的方法 */</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static int add(int n1, int n2) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int sum = n1 + n2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">return sum;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">// 方法名相同，参数个数不同，构成重载</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static int add(int n1, int n2, int n3) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int sum = n1 + n2 + n3;</td>
-						</tr>
-						<tr>
-							<td class="right_2">return sum;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">// 方法名相同，参数类型不同，构成重载</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static double add(double n1, int n2) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">double sum = n1 + n2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">return sum;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">// 方法名相同，参数顺序不同，构成重载</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static double add(int n1, double n2) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">double sum = n1 + n2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">return sum;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">//编译错误：只有返回值不同，不构成方法的重载</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static double add(int n1, int n2) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">double sum = n1 + n2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">return sum;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">//编译错误：只有参数名称不同，不构成方法的重载</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static int add(int n2, int n1) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">double sum = n1 + n2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">return sum;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+					<div class="code_number_border">29</div>
+					<div class="code_number_border">30</div>
+					<div class="code_number_border">31</div>
+					<div class="code_number_border">32</div>
+					<div class="code_number_border">33</div>
+					<div class="code_number_border">34</div>
+					<div class="code_number_border">35</div>
+					<div class="code_number_border">36</div>
+					<div class="code_number_border">37</div>
+					<div class="code_number_border">38</div>
+					<div class="code_number_border">39</div>
+					<div class="code_number_border">40</div>
+					<div class="code_number_border">41</div>
+					<div class="code_number_border">42</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>public class Test1 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">System.out.println(add(3, 5));// 8</div>
+					<div class="right_2">System.out.println(add(3, 5, 10));// 18</div>
+					<div class="right_2">System.out.println(add(3.0, 5));// 8.0</div>
+					<div class="right_2">System.out.println(add(3, 5.0));// 8.0</div>
+					<div class="right_2">// 我们已经见过的方法的重载</div>
+					<div class="right_2">System.out.println();// 0个参数</div>
+					<div class="right_2">System.out.println(1);// 参数是1个int</div>
+					<div class="right_2">System.out.println(3.0);// 参数是1个double</div>
+					<div class="right_1">}</div>
+					<div class="right_1">/** 求和的方法 */</div>
+					<div class="right_1">public static int add(int n1, int n2) {</div>
+					<div class="right_2">int sum = n1 + n2;</div>
+					<div class="right_2">return sum;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">// 方法名相同，参数个数不同，构成重载</div>
+					<div class="right_1">public static int add(int n1, int n2, int n3) {</div>
+					<div class="right_2">int sum = n1 + n2 + n3;</div>
+					<div class="right_2">return sum;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">// 方法名相同，参数类型不同，构成重载</div>
+					<div class="right_1">public static double add(double n1, int n2) {</div>
+					<div class="right_2">double sum = n1 + n2;</div>
+					<div class="right_2">return sum;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">// 方法名相同，参数顺序不同，构成重载</div>
+					<div class="right_1">public static double add(int n1, double n2) {</div>
+					<div class="right_2">double sum = n1 + n2;</div>
+					<div class="right_2">return sum;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">//编译错误：只有返回值不同，不构成方法的重载</div>
+					<div class="right_1">public static double add(int n1, int n2) {</div>
+					<div class="right_2">double sum = n1 + n2;</div>
+					<div class="right_2">return sum;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">//编译错误：只有参数名称不同，不构成方法的重载</div>
+					<div class="right_1">public static int add(int n2, int n1) {</div>
+					<div class="right_2">double sum = n1 + n2;</div>
+					<div class="right_2">return sum;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 		</div>
 	</body>
 </html>

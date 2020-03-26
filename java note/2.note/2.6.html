@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>对象和类的概念</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,26 +14,22 @@
         <center>
 			<h1>对象和类的概念</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.对象和类的概念</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.类的定义 </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">对象和类的概念</li>					
 			</ul>
 			<ul class="ul">
 				<li class="fontsize null_string">
-					类：我们叫做class。 对象：我们叫做Object,instance(实例)。以后我们说某个类的对象，某个类的实例。是一样的意思
+					<span class="thick">类</span>：我们叫做class。
 				</li>					
 			</ul>
 			<ul class="ul">
 				<li class="fontsize null_string">
+					<span class="thick">对象</span>：我们叫做Object,instance(实例)。以后我们说某个类的对象，某个类的实例。是一样的意思.
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
 					 总结:
 				</li>
 			</ul>
@@ -56,98 +52,78 @@
 				<li id="2" class="fontsize thick">类的定义</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					[示例1]类的定义方式:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>// 每一个源文件必须有且只有一个public class，并且类名和文件名保持一致！</td>
-						</tr>
-						<tr>
-							<td>public class Car {</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Tyre { // 一个Java文件可以同时定义多个class</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Engine {</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Seat {</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>// 每一个源文件必须有且只有一个public class，并且类名和文件名保持一致！</div>
+					<div>public class Car {</div>
+					<div>}</div>
+					<div>class Tyre { // 一个Java文件可以同时定义多个class</div>
+					<div>}</div>
+					<div>class Engine {</div>
+					<div>}</div>
+					<div>class Seat {</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					上面的类定义好后，没有任何的其他信息，就跟我们拿到一张张图纸，但是纸上没有任何信息，这是一个空类，没有任何实际意义。所以，我们需要定义类的具体信息。对于一个类来说，一般有三种常见的成员：属性field、方法method、构造器constructor。这三种成员都可以定义零个或多个
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					[示例2]简单的学生类编写:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class SxtStu {</td>
-						</tr>
-						<tr>
-							<td class="right_1">//属性（成员变量）</td>
-						</tr>
-						<tr>
-							<td class="right_1">int id;</td>
-						</tr>
-						<tr>
-							<td class="right_1">String sname;</td>
-						</tr>
-						<tr>
-							<td class="right_1">int age;</td>
-						</tr>
-						<tr>
-							<td class="right_1">//方法</td>
-						</tr>
-						<tr>
-							<td class="right_1">void study(){</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("我正在学习！");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">//构造方法</td>
-						</tr>
-						<tr>
-							<td class="right_1">SxtStu(){</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class SxtStu {</div>
+					<div class="right_1">//属性（成员变量）</div>
+					<div class="right_1">int id;</div>
+					<div class="right_1">String sname;</div>
+					<div class="right_1">int age;</div>
+					<div class="right_1">//方法</div>
+					<div class="right_1">void study(){</div>
+					<div class="right_2">System.out.println("我正在学习！");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">//构造方法</div>
+					<div class="right_1">SxtStu(){</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 		</div>
 	</body>
 </html>

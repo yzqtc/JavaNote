@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>构造方法</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,20 +14,6 @@
         <center>
 			<h1>构造方法</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.概念 </a></li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#2">2.要点 </a></li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#3">3.构造方法的重载 </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">概念</li>					
@@ -61,25 +47,23 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					声明格式:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>[修饰符] 类名(形参列表){</td>
-						</tr>
-						<tr>
-							<td class="right_1">//n条语句</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>[修饰符] 类名(形参列表){</div>
+					<div class="right_1">//n条语句</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul>
 				<li id="3" class="fontsize thick">构造方法的重载</li>					
 			</ul>
@@ -93,80 +77,59 @@
 					[示例1]构造方法重载(创建不同用户对象):
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class User {</div>
+					<div class="right_1">int id; // id</div>
+					<div class="right_1">String name; // 账户名</div>
+					<div class="right_1">String pwd; // 密码</div>
+					<div class="right_1">public User() {</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public User(int id, String name) {</div>
+					<div class="right_2">super();</div>
+					<div class="right_2">this.id = id;</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public User(int id, String name, String pwd) {</div>
+					<div class="right_2">this.id = id;</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_2">this.pwd = pwd;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">User u1 = new User();</div>
+					<div class="right_2">User u2 = new User(101, "ywh");</div>
+					<div class="right_2">User u3 = new User(100, "ywh1", "123456");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class User {</td>
-						</tr>
-						<tr>
-							<td class="right_1">int id; // id</td>
-						</tr>
-						<tr>
-							<td class="right_1">String name; // 账户名</td>
-						</tr>
-						<tr>
-							<td class="right_1">String pwd; // 密码</td>
-						</tr>
-						<tr>
-							<td class="right_1">public User() {</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public User(int id, String name) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">super();</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.id = id;</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.name = name;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public User(int id, String name, String pwd) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.id = id;</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.name = name;</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.pwd = pwd;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">User u1 = new User();</td>
-						</tr>
-						<tr>
-							<td class="right_2">User u2 = new User(101, "ywh");</td>
-						</tr>
-						<tr>
-							<td class="right_2">User u3 = new User(100, "ywh1", "123456");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string color_red">
 					注意:
 				</li>					
 			</ul>

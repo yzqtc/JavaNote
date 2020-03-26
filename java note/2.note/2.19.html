@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>继承</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -15,6 +15,9 @@
 			<h1>继承</h1>  
         </center>
 		<div>
+			<ul>
+				<li id="1" class="fontsize thick">继承</li>					
+			</ul>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					继承让我们更加容易实现类的扩展。 比如，我们定义了人类，再定义Boy类就只需要扩展人类即可。实现了代码的重用。
@@ -36,97 +39,164 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize null_string">
 					[示例]使用extends实现继承:
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class Test{</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Student s = new Student("ywh",172,"Java");</div>
+					<div class="right_2">s.rest();</div>
+					<div class="right_2">s.study();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Person {</div>
+					<div class="right_1">String name;</div>
+					<div class="right_1">int height;</div>
+					<div class="right_1">public void rest(){</div>
+					<div class="right_2">System.out.println("休息一会！");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Student extends Person {</div>
+					<div class="right_1">String major; //专业</div>
+					<div class="right_1">public void study(){</div>
+					<div class="right_2">System.out.println("正在学习Java");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public Student(String name,int height,String major) {</div>
+					<div class="right_2">//天然拥有父类的属性</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_2">this.height = height;</div>
+					<div class="right_2">this.major = major;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test{</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">Student s = new Student("ywh",172,"Java");</td>
-						</tr>
-						<tr>
-							<td class="right_2">s.rest();</td>
-						</tr>
-						<tr>
-							<td class="right_2">s.study();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Person {</td>
-						</tr>
-						<tr>
-							<td class="right_1">String name;</td>
-						</tr>
-						<tr>
-							<td class="right_1">int height;</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void rest(){</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("休息一会！");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Student extends Person {</td>
-						</tr>
-						<tr>
-							<td class="right_1">String major; //专业</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void study(){</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("正在学习Java");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public Student(String name,int height,String major) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">//天然拥有父类的属性</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.name = name;</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.height = height;</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.major = major;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
+				<li class="fontsize null_string">
+					<img src="../img/2.19_3.png" />
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">继承树追溯</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					属性/方法查找顺序:(比如：查找变量h)
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.查找当前类中有没有属性h
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.依次上溯每个父类，查看每个父类中是否有h，直到Object
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3.如果没找到，则出现编译错误
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					4.上面步骤，只要找到h变量，则这个过程终止
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					构造方法调用顺序:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					构造方法第一句总是：super(…)来调用父类对应的构造方法。所以，流程就是：先向上追溯到Object，然后再依次向下执行类的初始化块和构造方法，直到当前子类为止。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					<span class="color_red">注</span>：静态初始化块调用顺序，与构造方法调用顺序一样，不再重复。
 				</li>					
 			</ul>
 			<ul class="ul">
 				<li class="fontsize null_string">
-					<img src="../img/2.19_3.png" />
+					[示例]构造方法向上追溯执行测试:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class TestSuper{ </div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">System.out.println("开始创建一个ChildClass对象......");</div>
+					<div class="right_2">new ChildClass();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class FatherClass {</div>
+					<div class="right_1">public FatherClass() {</div>
+					<div class="right_2">System.out.println("创建FatherClass");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class ChildClass extends FatherClass {</div>
+					<div class="right_1">public ChildClass() {</div>
+					<div class="right_2">System.out.println("创建ChildClass");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/2.19_5.png" />
 				</li>					
 			</ul>
 		</div>

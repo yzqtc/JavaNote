@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>字符型</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,15 +14,6 @@
         <center>
 			<h1>字符型</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.字符型变量/常量</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.转义字符 </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">字符型变量/常量</li>					
@@ -42,18 +33,17 @@
 					[示例1]字符型举例:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>char c = 'a';</td>
-						</tr>
-						<tr>
-							<td>char c1 = '中';</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>char c = 'a';</div>
+					<div>char c1 = '中';</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					Unicode具有从0到65535之间的编码，他们通常用从'\u0000'到'\uFFFF'之间的十六进制值来表示(前缀为u表示Unicode)
@@ -64,15 +54,15 @@
 					[示例2]字符型十六进制值表示方法:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>char c = '\u0061';</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>char c = '\u0061';</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					Java语言中还允许使用转义字符'\'来将其后的字符转变为其他的含义。常用的转义字符及其含义和Unicode值如表所示
@@ -88,18 +78,18 @@
 					[示例3]转义字符:
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>char c = '\n'; //表示换行符</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>char c = '\n'; //表示换行符</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="500px" height="150px">
+				<li class="fontsize margin_left40">
+					<table border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="500px" height="150px">
 						<tr align="center">
 							<td colspan="3">转义字符</td>
 						</tr>

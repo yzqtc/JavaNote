@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>变量分类</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,21 +14,12 @@
         <center>
 			<h1>变量分类</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.变量分类概念</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.局部变量、成员变量、静态变量的区别 </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">变量分类概念</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize thick">
 					 1、局部变量(local variable)
 				</li>					
 			</ul>	
@@ -42,41 +33,33 @@
 					 局部变量声明:
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public void test(){</div>
+					<div class="right_1">int i;</div>
+					<div class="right_1">int j = i+5;//编译出错，变量i还未被初始化</div>
+					<div>}</div>
+					<div>public void test(){</div>
+					<div class="right_1">int i;</div>
+					<div class="right_1">i = 10;</div>
+					<div class="right_1">int j = i+5;//编译正确</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000" height="60">
-						<tr>
-							<td>public void test(){</td>
-						</tr>
-						<tr>
-							<td class="right_1">int i;</td>
-						</tr>
-						<tr>
-							<td class="right_1">int j = i+5;//编译出错，变量i还未被初始化</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>public void test(){</td>
-						</tr>
-						<tr>
-							<td class="right_1">int i;</td>
-						</tr>
-						<tr>
-							<td class="right_1">i = 10;</td>
-						</tr>
-						<tr>
-							<td class="right_1">int j = i+5;//编译正确</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize thick">
 					2.成员变量(也叫实例变量 member variable)
 				</li>					
 			</ul>
@@ -86,8 +69,8 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellspacing="0" width="500" height="200">
+				<li class="fontsize margin_left20">
+					<table class="margin_left20" border="1px solid" bordercolor="#d0d0d0" cellspacing="0" width="500" height="200">
 						<tr align="center">
 							<td colspan="2">实例变量默认初始值</td>
 						</tr>
@@ -119,23 +102,21 @@
 					实例变量声明:
 				</li>
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class Test{</div>
+					<div class="right_1">int i;</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test{</td>
-						</tr>
-						<tr>
-							<td class="right_1">int i;</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize thick">
 					3.静态变量(类变量 static variable)
 				</li>					
 			</ul>
@@ -149,45 +130,45 @@
 					静态变量的声明:
 				</li>
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>static int size;</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>static int size;</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul>
-				<li id="2" class="fontsize">
+				<li id="2" class="fontsize thick">
 					局部变量、成员变量、静态变量的区别
 				</li>
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
-					<table border="1px solid" bordercolor="#d0d0d0" cellspacing="0" width="1200" height="200">
+				<li class="fontsize">
+					<table border="1px solid" bordercolor="#d0d0d0" cellspacing="0" width="950" height="200">
 						<tr align="center">
 							<td colspan="4">局部变量、成员变量、静态变量的区别</td>
 						</tr>
-						<tr align="left">
+						<tr align="center">
 							<td>类型</td>
 							<td>声明的位置</td>
 							<td>从属于</td>
 							<td>生命周期</td>
 						</tr>
-						<tr align="left">
+						<tr align="center">
 							<td>局部变量</td>
 							<td>方法或语句块内部</td>
 							<td>方法/语句块</td>
 							<td>从声明位置开始，直到方法或语句块执行完毕，局部变量消失</td>
 						</tr>
-						<tr align="left">
+						<tr align="center">
 							<td>成员变量(实例变量)</td>
 							<td>类内部，方法外部</td>
 							<td>对象</td>
 							<td>对象创建，成员变量也跟着创建。对象消失，成员变量也跟着消失</td>
 						</tr>
-						<tr align="left">
+						<tr align="center">
 							<td>静态变量(类变量)</td>
 							<td>类内部，static修饰</td>
 							<td>类</td>

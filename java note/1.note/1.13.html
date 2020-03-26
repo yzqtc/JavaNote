@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>浮点变量和浮点常量</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,15 +14,6 @@
         <center>
 			<h1>整型变量和整型常量</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.浮点型变量/常量</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.BigDecimal </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">浮点型变量/常量</li>					
@@ -31,27 +22,27 @@
 				<li class="fontsize null_string">
 					 带小数的数据在Java中称为浮点型，浮点型可分为float类型和double类型
 				</li>					
-			</ul>	
+			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="1000px" height="150px">
+				<li class="fontsize margin_left40">
+					<table border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="800px" height="150px">
 						<tr align="center">
 							<td colspan="3">浮点型数据类型</td>
 						</tr>
-						<tr align="left">
+						<tr align="center">
 							<td>整型</td>
 							<td>占用存储空间</td>
 							<td>表数范围</td>
 						</tr>
-						<tr align="left">
-							<td>float</td>
-							<td>4字节</td>
-							<td>-3.403E38~3.403E38</td>
+						<tr>
+							<td align="center">float</td>
+							<td align="center">4字节</td>
+							<td align="left">-3.403E38~3.403E38</td>
 						</tr>
-						<tr align="left">
-							<td>double</td>
-							<td>8字节</td>
-							<td>-1.798E308~1.798E308</td>
+						<tr>
+							<td align="center">double</td>
+							<td align="center">8字节</td>
+							<td align="left">-1.798E308~1.798E308</td>
 						</tr>
 					</table>
 				</li>					
@@ -66,18 +57,17 @@
 					[示例1]使用科学计数法给浮点型变量赋值:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>double d = 314e2; //314*10^2-->31400.0</td>
-						</tr>
-						<tr>
-							<td>double d2 = 314e-2; //314*10^(-2)-->3.14</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>double d = 314e2; //314*10^2-->31400.0</div>
+					<div>double d2 = 314e-2; //314*10^(-2)-->3.14</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					float类型的数值有一个后缀F后者f，没有后缀F/f的浮点数默认为double类型。也可以在浮点数值后添加后缀D后者d，以明确其为double类型
@@ -88,21 +78,19 @@
 					[示例2]float类型赋值时需要添加后缀F/f
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>float f = 3.14F;</td>
-						</tr>
-						<tr>
-							<td>double d1 = 3.14;</td>
-						</tr>
-						<tr>
-							<td>double d2 = 3.14D;</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>float f = 3.14F;</div>
+					<div>double d1 = 3.14;</div>
+					<div>double d2 = 3.14D;</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string color_red">
 					注意:
@@ -118,53 +106,46 @@
 					[示例3]浮点数比较一
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>float f = 0.1f;</div>
+					<div>double d = 1.0/10;</div>
+					<div>System.out.println(f == d);//结果为false</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>float f = 0.1f;</td>
-						</tr>
-						<tr>
-							<td>double d = 1.0/10;</td>
-						</tr>
-						<tr>
-							<td>System.out.println(f == d);//结果为false</td>
-						</tr>
-					</table>
-				</li>					
-			</ul><ul class="ul">
 				<li class="fontsize null_string">
 					[示例4]浮点数比较二
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_4">
+					<div>float f1 = 423432423f;</div>
+					<div>float f2 = f1 + 1;</div>
+					<div>if(f1 == f2){</div>
+					<div class="right_1">System.out.println("f1 == f2");</div>
+					<div>}else</div>
+					<div class="right_1">System.out.println("f1 != f2");</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_4" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_4">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>float f1 = 423432423f;</td>
-						</tr>
-						<tr>
-							<td>float f2 = f1 + 1;</td>
-						</tr>
-						<tr>
-							<td>if(f1 == f2){</td>
-						</tr>
-						<tr>
-							<td class="right_1">System.out.println("f1 == f2");</td>
-						</tr>
-						<tr>
-							<td>}else</td>
-						</tr>
-						<tr>
-							<td class="right_1">System.out.println("f1 != f2");</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			</ul><ul class="ul">
 				<li class="fontsize null_string">
 					运行以上两个示例，发现示例3的结果是"false"，而示例4的输出结果是"f1 == f2"。这是因为字长有限，浮点数能够精确表示的数是有限的，因而也是离散的。浮点数一般都存在舍入误差，很多数字无法精确表示(例如0.1)，其结果只能是接近，但不等于。二进制浮点数不能精确的表示0.1,0.01，0.001这样10的负次幂。并不是所有的小数都能精确的用二进制浮点数表示
 				</li>					
@@ -192,51 +173,39 @@
 					[示例5]使用BigDecimal进行浮点数比较
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>import java.math.BigDecimal</td>
-						</tr>
-						<tr>
-							<td>public class Main{</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args){</td>
-						</tr>
-						<tr>
-							<td class="right_2">BigDecimal bd = BigDecimal.valueof(1.0);</td>
-						</tr>
-						<tr>
-							<td class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</td>
-						</tr>
-						<tr>
-							<td class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</td>
-						</tr>
-						<tr>
-							<td class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</td>
-						</tr>
-						<tr>
-							<td class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</td>
-						</tr>
-						<tr>
-							<td class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(bd);//0.5</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(1.0 - 0.1 - 0.1 - 0.1 - 0.1 - 0.1);//0.5000000000000001</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+				</div>
+				<div class="fontsize" id="codediv_5">
+					<div>import java.math.BigDecimal</div>
+					<div>public class Main{</div>
+					<div class="right_1">public static void main(String[] args){</div>
+					<div class="right_2">BigDecimal bd = BigDecimal.valueof(1.0);</div>
+					<div class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</div>
+					<div class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</div>
+					<div class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</div>
+					<div class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</div>
+					<div class="right_2">bd = bd.subtract(BigDecimal.valueof(0.1));</div>
+					<div class="right_2">System.out.println(bd);//0.5</div>
+					<div class="right_2">System.out.println(1.0 - 0.1 - 0.1 - 0.1 - 0.1 - 0.1);//0.5000000000000001</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_5" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_5">复制</div>
+			</div>
 		</div>
 	</body>
 </html>

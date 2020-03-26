@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组</title>
+	</head>
+	<script type="text/javascript" src="../js/index/import.js"></script>
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-25
+        	描述：数组
+        -->
+        <center>
+			<h1>数组</h1>  
+        </center>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">数组概述和特点</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					数组的定义
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					数组是相同类型数据的有序集合。数组描述的是相同类型的若干个数据，按照一定的先后次序排列组合而成。其中，每一个数据称作一个元素，每个元素可以通过一个索引(下标)来访问它们。数组的三个基本特点:
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1. 长度是确定的。数组一旦被创建，它的大小就是不可以改变的。
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2. 其元素必须是相同类型，不允许出现混合类型。
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3. 数组类型可以是任何数据类型，包括基本类型和引用类型。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string color_red">
+					建议:
+				</li>
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					数组变量属引用类型，数组也可以看成是对象，数组中的每个元素相当于该对象的成员变量。数组本身就是对象，Java中对象是在堆中的，因此数组无论保存原始类型还是其他对象类型，数组对象本身是在堆中存储的。
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">数组声明</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]数组的声明方式有两种(以一维数组为例):
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>type[] arr_name; //（推荐使用这种方式）</div>
+					<div>type arr_name[];</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string color_red">
+					注意事项:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1. 声明的时候并没有实例化任何对象，只有在实例化数组对象时，JVM才分配空间，这时才与长度有关。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2. 声明一个数组的时候并没有数组真正被创建。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3. 构造一个数组，必须指定长度。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]创建基本类型一维数组:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String args[]) {</div>
+					<div class="right_2">int[] s = null; // 声明数组</div>
+					<div class="right_2">s = new int[10]; // 给数组分配空间</div>
+					<div class="right_2">for (int i = 0; i < 10; i++) {</div>
+					<div class="right_3">s[i] = 2 * i + 1;//给数组元素赋值</div>
+					<div class="right_3">System.out.println(s[i]);</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_1.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]创建引用类型一维数组:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>class Man{</div>
+					<div class="right_1">private int age;</div>
+					<div class="right_1">private int id;</div>
+					<div class="right_1">public Man(int id,int age) {</div>
+					<div class="right_2">super();</div>
+					<div class="right_2">this.age = age;</div>
+					<div class="right_2">this.id = id;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>public class AppMain {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Man[] mans;  //声明引用类型数组</div>
+					<div class="right_2">mans = new Man[10];  //给引用类型数组分配空间</div>
+					<div class="right_2">Man m1 = new Man(1,11);</div>
+					<div class="right_2">Man m2 = new Man(2,22);</div>
+					<div class="right_2">mans[0]=m1;//给引用类型数组元素赋值</div>
+					<div class="right_2">mans[1]=m2;//给引用类型数组元素赋值</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_2.png" />
+				</li>					
+			</ul>
+			<ul>
+				<li id="3" class="fontsize thick">初始化</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					数组的初始化方式总共有三种：静态初始化、动态初始化、默认初始化。下面针对这三种方式分别讲解。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					1. 静态初始化
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					 除了用new关键字来产生数组以外，还可以直接在定义数组的同时就为数组元素分配空间并赋值。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]静态初始化数组:
+				</li>					
+			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+				</div>
+				<div class="fontsize" id="codediv_4">
+					<div>int[] a = { 1, 2, 3 };// 静态初始化基本类型数组</div>
+					<div>Man[] mans = { new Man(1, 1), new Man(2, 2) };// 静态初始化引用类型数组</div>
+				</div>
+				<div class="copy" id="copy_4" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_4">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					2. 动态初始化
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					数组定义与为数组元素分配空间并赋值的操作分开进行。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]动态初始化数组:
+				</li>					
+			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_5">
+					<div>int[] a1 = new int[2];//动态初始化数组，先分配空间</div>
+					<div>a1[0]=1;//给数组元素赋值</div>
+					<div>a1[1]=2;//给数组元素赋值</div>
+				</div>
+				<div class="copy" id="copy_5" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_5">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					3. 数组的默认初始化
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					数组是引用类型，它的元素相当于类的实例变量，因此数组一经分配空间，其中的每个元素也被按照实例变量同样的方式被隐式初始化。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]数组的默认初始化:
+				</li>					
+			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_6">
+					<div>int a2[] = new int[2]; // 默认值：0,0</div>
+					<div>boolean[] b = new boolean[2]; // 默认值：false,false</div>
+					<div>String[] s = new String[2]; // 默认值：null, null</div>
+				</div>
+				<div class="copy" id="copy_6" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_6">复制</div>
+			</div>
+			<ul>
+				<li id="4" class="fontsize thick">数组的遍历</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					数组元素下标的合法区间：[0, length-1]。我们可以通过下标来遍历数组中的元素，遍历时可以读取元素的值或者修改元素的值。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]使用循环遍历初始化和读取数组:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+				</div>
+				<div class="fontsize" id="codediv_7">
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[] a = new int[4];</div>
+					<div class="right_2">//初始化数组元素的值</div>
+					<div class="right_2">for(int i=0;i&lt;a.length;i++){</div>
+					<div class="right_3">a[i] = 100*i;</div>
+					<div class="right_2">}</div>
+					<div class="right_2">//读取元素的值</div>
+					<div class="right_2">for(int i=0;i&lt;a.length;i++){</div>
+					<div class="right_3">System.out.println(a[i]);</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_7" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_7">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_3.png" />
+				</li>					
+			</ul>
+			<ul>
+				<li id="5" class="fontsize thick">for-each循环</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					增强for循环for-each是JDK1.5新增加的功能，专门用于读取数组或集合中所有的元素，即对数组进行遍历。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]增强for循环:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+				</div>
+				<div class="fontsize" id="codediv_8">
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">String[] ss = { "aa", "bbb", "ccc", "ddd" };</div>
+					<div class="right_2">for (String temp : ss) {</div>
+					<div class="right_3">System.out.println(temp);</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_8" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_8">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_4.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string color_red">
+					注意事项:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1. for-each增强for循环在遍历数组过程中不能修改数组中某元素的值。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2. for-each仅适用于遍历，不涉及有关索引(下标)的操作。
+				</li>					
+			</ul>
+			<ul>
+				<li id="6" class="fontsize thick">数组的拷贝</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					System类里也包含了一个static void arraycopy(object src，int srcpos，object dest， int destpos，int length)方法，该方法可以将src数组里的元素值赋给dest数组的元素，其中srcpos指定从src数组的第几个元素开始赋值，length参数指定将src数组的多少个元素赋给dest数组的元素。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]数组拷贝:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+				</div>
+				<div class="fontsize" id="codediv_9">
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">String[] s = {"阿里","腾讯","京东","搜狐","网易"};</div>
+					<div class="right_2">String[] sBak = new String[6];</div>
+					<div class="right_2">System.arraycopy(s,0,sBak,0,s.length);</div>
+					<div class="right_2">for (int i = 0; i &lt; sBak.length; i++) {</div>
+					<div class="right_3">System.out.print(sBak[i]+ "\t");</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_9" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_9">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_5.png" />
+				</li>					
+			</ul>
+			<ul>
+				<li id="7" class="fontsize thick">java.util.Arrays类</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					JDK提供的java.util.Arrays类，包含了常用的数组操作，方便我们日常开发。Arrays类包含了：排序、查找、填充、打印内容等常见的操作。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]打印数组:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+				</div>
+				<div class="fontsize" id="codediv_10">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[] a = { 1, 2 };</div>
+					<div class="right_2">System.out.println(a); // 打印数组引用的值</div>
+					<div class="right_2">System.out.println(Arrays.toString(a)); // 打印数组元素的值</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_10" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_10">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_6.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string color_red">
+					注意:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					此处的Arrays.toString()方法是Arrays类的静态方法，不是前面讲的Object的toString()方法。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]数组元素的排序:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+				</div>
+				<div class="fontsize" id="codediv_11">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[] a = {1,2,323,23,543,12,59};</div>
+					<div class="right_2">System.out.println(Arrays.toString(a));</div>
+					<div class="right_2">Arrays.sort(a);</div>
+					<div class="right_2">System.out.println(Arrays.toString(a));</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_11" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_11">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_7.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]数组元素是引用类型的排序(Comparable接口的应用):
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+					<div class="code_number_border">29</div>
+					<div class="code_number_border">30</div>
+					<div class="code_number_border">31</div>
+				</div>
+				<div class="fontsize" id="codediv_12">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Man[] msMans = { new Man(3, "a"), new Man(60, "b"), new Man(2, "c") };</div>
+					<div class="right_2">Arrays.sort(msMans);</div>
+					<div class="right_2">System.out.println(Arrays.toString(msMans));</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Man implements Comparable {</div>
+					<div class="right_1">int age;</div>
+					<div class="right_1">int id;</div>
+					<div class="right_1">String name;</div>
+					<div class="right_1">public Man(int age, String name) {</div>
+					<div class="right_2">super();</div>
+					<div class="right_2">this.age = age;</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public String toString() {</div>
+					<div class="right_2">return this.name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public int compareTo(Object o) {</div>
+					<div class="right_2">Man man = (Man) o;</div>
+					<div class="right_2">if (this.age &lt; man.age) {</div>
+					<div class="right_3">return -1;</div>
+					<div class="right_2">}</div>
+					<div class="right_2">if (this.age > man.age) {</div>
+					<div class="right_3">return 1;</div>
+					<div class="right_2">}</div>
+					<div class="right_2">return 0;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_12" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_12">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]二分法查找:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+				</div>
+				<div class="fontsize" id="codediv_13">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[] a = {1,2,323,23,543,12,59};</div>
+					<div class="right_2">System.out.println(Arrays.toString(a));</div>
+					<div class="right_2">Arrays.sort(a); //使用二分法查找，必须先对数组进行排序</div>
+					<div class="right_2">System.out.println(Arrays.toString(a));</div>
+					<div class="right_2">//返回排序后新的索引位置,若未找到返回负数</div>
+					<div class="right_2">System.out.println("该元素的索引："+Arrays.binarySearch(a, 12));</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_13" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_13">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_8.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]数组填充:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+				</div>
+				<div class="fontsize" id="codediv_14">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[] a= {1,2,323,23,543,12,59};</div>
+					<div class="right_2">System.out.println(Arrays.toString(a));</div>
+					<div class="right_2">Arrays.fill(a, 2, 4, 100); //将2到4索引的元素替换为100</div>
+					<div class="right_2">System.out.println(Arrays.toString(a));</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_14" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_14">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_9.png" />
+				</li>					
+			</ul>
+			<ul>
+				<li id="8" class="fontsize thick">多维数组</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					多维数组可以看成以数组为元素的数组。可以有二维、三维、甚至更多维数组，但是实际开发中用的非常少。最多到二维数组(学习容器后，我们一般使用容器，二维数组用的都很少)。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]二维数组的声明:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+				</div>
+				<div class="fontsize" id="codediv_15">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">// Java中多维数组的声明和初始化应按从低维到高维的顺序进行</div>
+					<div class="right_2">int[][] a = new int[3][];</div>
+					<div class="right_2">a[0] = new int[2];</div>
+					<div class="right_2">a[1] = new int[4];</div>
+					<div class="right_2">a[2] = new int[3];</div>
+					<div class="right_2">// int a1[][]=new int[][4];//非法</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_15" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_15">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]二维数组的静态初始化:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_16">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[][] a = { { 1, 2, 3 }, { 3, 4 }, { 3, 5, 6, 7 } };</div>
+					<div class="right_2">System.out.println(a[2][3]);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_16" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_16">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_10.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]二维数组的动态初始化:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+				</div>
+				<div class="fontsize" id="codediv_17">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[][] a = new int[3][];</div>
+					<div class="right_2">// a[0] = {1,2,5}; //错误，没有声明类型就初始化</div>
+					<div class="right_2">a[0] = new int[] { 1, 2 };</div>
+					<div class="right_2">a[1] = new int[] { 2, 2 };</div>
+					<div class="right_2">a[2] = new int[] { 2, 2, 3, 4 };</div>
+					<div class="right_2">System.out.println(a[2][3]);</div>
+					<div class="right_2">System.out.println(Arrays.toString(a[0]));</div>
+					<div class="right_2">System.out.println(Arrays.toString(a[1]));</div>
+					<div class="right_2">System.out.println(Arrays.toString(a[2]));</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_17" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_17">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_11.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]获取数组长度:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+				</div>
+				<div class="fontsize" id="codediv_18">
+					<div>//获取的二维数组第一维数组的长度</div>
+					<div>System.out.println(a.length);</div>
+					<div>//获取第二维第一个数组长度</div>
+					<div>System.out.println(a[0].length);</div>
+				</div>
+				<div class="copy" id="copy_18" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_18">复制</div>
+			</div>
+			<ul>
+				<li id="9" class="fontsize thick">冒泡排序的基础算法</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					冒泡排序是最常用的排序算法，在笔试中也非常常见，能手写出冒泡排序算法可以说是基本的素养。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					算法重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来，这样越大的元素会经由交换慢慢“浮”到数列的顶端。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					冒泡排序算法的运作如下:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1. 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2. 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3. 针对所有的元素重复以上的步骤，除了最后一个。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					4. 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]冒泡排序的基础算法:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+				</div>
+				<div class="fontsize" id="codediv_19">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[] values = { 3, 1, 6, 2, 9, 0, 7, 4, 5, 8 };</div>
+					<div class="right_2">bubbleSort(values);</div>
+					<div class="right_2">System.out.println(Arrays.toString(values));</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public static void bubbleSort(int[] values) {</div>
+					<div class="right_2">int temp;</div>
+					<div class="right_2">for (int i = 0; i &lt; values.length; i++) {</div>
+					<div class="right_3">for (int j = 0; j &lt; values.length - 1 - i; j++) {</div>
+					<div class="right_4">if (values[j] &gt; values[j + 1]) {</div>
+					<div class="right_5">temp = values[j];</div>
+					<div class="right_5">values[j] = values[j + 1];</div>
+					<div class="right_5">values[j + 1] = temp;</div>
+					<div class="right_4">}</div>
+					<div class="right_3">}</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_19" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_19">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_12.png" />
+				</li>					
+			</ul>
+			<ul>
+				<li id="10" class="fontsize thick">二分法查找</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					二分法检索(binary search)又称折半检索，二分法检索的基本思想是设数组中的元素从小到大有序地存放在数组(array)中，首先将给定值key与数组中间位置上元素的关键码(key)比较，如果相等，则检索成功;
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					否则，若key小，则在数组前半部分中继续进行二分法检索；
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					若key大，则在数组后半部分中继续进行二分法检索。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					 这样，经过一次比较就缩小一半的检索区间，如此进行下去，直到检索成功或检索失败。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					 二分法检索是一种效率较高的检索方法。比如，我们要在数组[7, 8, 9, 10, 12, 20, 30, 40, 50, 80, 100]中查询到10元素，过程如下：
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_13.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]二分法查找:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+				</div>
+				<div class="fontsize" id="codediv_20">
+					<div>import java.util.Arrays;</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int[] arr = { 30,20,50,10,80,9,7,12,100,40,8};</div>
+					<div class="right_2">int searchWord = 20; // 所要查找的数</div>
+					<div class="right_2">Arrays.sort(arr); //二分法查找之前，一定要对数组元素排序</div>
+					<div class="right_2">System.out.println(Arrays.toString(arr));</div>
+					<div class="right_2">System.out.println(searchWord+"元素的索引："+binarySearch(arr,searchWord));</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public static int binarySearch(int[] array, int value){</div>
+					<div class="right_2">int low = 0;</div>
+					<div class="right_2">int high = array.length - 1;</div>
+					<div class="right_2">while(low &lt;= high){</div>
+					<div class="right_3">int middle = (low + high) / 2</div>
+					<div class="right_3">if(value == array[middle]){</div>
+					<div class="right_4">return middle; //返回查询到的索引位置</div>
+					<div class="right_3">}</div>
+					<div class="right_3">if(value &gt; array[middle]){</div>
+					<div class="right_4">low = middle + 1;</div>
+					<div class="right_3">}</div>
+					<div class="right_3">if(value &lt; array[middle]){</div>
+					<div class="right_4">high = middle - 1;</div>
+					<div class="right_3">}</div>
+					<div class="right_2">}</div>
+					<div class="right_2">return -1;//上面循环完毕，说明未找到，返回-1</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_20" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_20">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					<img src="../img/1.21_14.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

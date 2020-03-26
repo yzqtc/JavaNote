@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>方法的重写override</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -41,117 +41,85 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize string_1">
 					[示例]方法重写:
 				</li>					
 			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+					<div class="code_number_border">29</div>
+					<div class="code_number_border">30</div>
+					<div class="code_number_border">31</div>
+					<div class="code_number_border">32</div>
+					<div class="code_number_border">33</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class TestOverride {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Vehicle v1 = new Vehicle();</div>
+					<div class="right_2">Vehicle v2 = new Horse();</div>
+					<div class="right_2">Vehicle v3 = new Plane();</div>
+					<div class="right_2">v1.run();</div>
+					<div class="right_2">v2.run();</div>
+					<div class="right_2">v3.run();</div>
+					<div class="right_2">v2.stop();</div>
+					<div class="right_2">v3.stop();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Vehicle { // 交通工具类</div>
+					<div class="right_1">public void run() {</div>
+					<div class="right_2">System.out.println("跑....");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void stop() {</div>
+					<div class="right_2">System.out.println("停止不动");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Horse extends Vehicle { // 马也是交通工具</div>
+					<div class="right_1">public void run() { // 重写父类方法</div>
+					<div class="right_2">System.out.println("四蹄翻飞，嘚嘚嘚...");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Plane extends Vehicle {</div>
+					<div class="right_1">public void run() { // 重写父类方法</div>
+					<div class="right_2">System.out.println("天上飞！");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void stop() {</div>
+					<div class="right_2">System.out.println("空中不能停，坠毁了！");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class TestOverride {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">Vehicle v1 = new Vehicle();</td>
-						</tr>
-						<tr>
-							<td class="right_2">Vehicle v2 = new Horse();</td>
-						</tr>
-						<tr>
-							<td class="right_2">Vehicle v3 = new Plane();</td>
-						</tr>
-						<tr>
-							<td class="right_2">v1.run();</td>
-						</tr>
-						<tr>
-							<td class="right_2">v2.run();</td>
-						</tr>
-						<tr>
-							<td class="right_2">v3.run();</td>
-						</tr>
-						<tr>
-							<td class="right_2">v2.stop();</td>
-						</tr>
-						<tr>
-							<td class="right_2">v3.stop();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Vehicle { // 交通工具类</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void run() {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("跑....");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void stop() {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("停止不动");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Horse extends Vehicle { // 马也是交通工具</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void run() { // 重写父类方法</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("四蹄翻飞，嘚嘚嘚...");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>class Plane extends Vehicle {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void run() { // 重写父类方法</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("天上飞！");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void stop() {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("空中不能停，坠毁了！");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					<img src="../img/2.19_1.png" />
 				</li>					
 			</ul>

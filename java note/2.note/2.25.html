@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多态</title>
+	</head>
+	<script type="text/javascript" src="../js/index/import.js"></script>
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-18
+        	描述：多态
+        -->
+        <center>
+			<h1>多态</h1>  
+        </center>
+		<div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					多态指的是同一个方法调用，由于对象不同可能会有不同的行为。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					多态的要点:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.多态是方法的多态，不是属性的多态(多态与属性无关)
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.多态的存在要有3个必要条件：继承，方法重写，父类引用指向子类对象
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3.父类引用指向子类对象后，用该父类引用调用子类重写的方法，此时多态就出现了
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]多态和类型转换测试:
+				</li>					
+			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+					<div class="code_number_border">29</div>
+					<div class="code_number_border">30</div>
+					<div class="code_number_border">31</div>
+					<div class="code_number_border">32</div>
+					<div class="code_number_border">33</div>
+					<div class="code_number_border">34</div>
+					<div class="code_number_border">35</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>class Animal {</div>
+					<div class="right_1">public void shout() {</div>
+					<div class="right_2">System.out.println("叫了一声！");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Dog extends Animal {</div>
+					<div class="right_1">public void shout() {</div>
+					<div class="right_2">System.out.println("旺旺旺！");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void seeDoor() {</div>
+					<div class="right_2">System.out.println("看门中....");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Cat extends Animal {</div>
+					<div class="right_1">public void shout() {</div>
+					<div class="right_2">System.out.println("喵喵喵喵！");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>public class TestPolym {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Animal a1 = new Cat(); // 向上可以自动转型</div>
+					<div class="right_2">//传的具体是哪一个类就调用哪一个类的方法。大大提高了程序的可扩展性</div>
+					<div class="right_2">animalCry(a1);</div>
+					<div class="right_2">Animal a2 = new Dog();</div>
+					<div class="right_2">animalCry(a2);//a2为编译类型，Dog对象才是运行时类型</div>
+					<div class="right_2">//编写程序时，如果想调用运行时类型的方法，只能进行强制类型转换</div>
+					<div class="right_2">// 否则通不过编译器的检查</div>
+					<div class="right_2">Dog dog = (Dog)a2;//向下需要强制类型转换</div>
+					<div class="right_2">dog.seeDoor();</div>
+					<div class="right_1">}</div>
+					<div class="right_1">// 有了多态，只需要让增加的这个类继承Animal类就可以了</div>
+					<div class="right_1">static void animalCry(Animal a) {</div>
+					<div class="right_2">a.shout();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					<img src="../img/2.25_1.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					示例展示了多态最为多见的一种用法，即父类引用做方法的形参，实参可以是任意的子类对象，可以通过不同的子类对象实现不同的行为方式。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					由此，我们可以看出多态的主要优势是提高了代码的可扩展性，符合开闭原则。但是多态也有弊端，就是无法调用子类特有的功能，比如，我不能使用父类的引用变量调用Dog类特有的seeDoor()方法。
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

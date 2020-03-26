@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>内存泄漏</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -19,7 +19,7 @@
 				<li id="1" class="fontsize thick">如下四种情况时最容易造成内存泄露的场景:</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					1.创建大量无用对象
 				</li>					
 			</ul>
@@ -28,26 +28,23 @@
 					比如，我们在需要大量拼接字符串时，使用了String而不是StringBuilder。
 				</li>					
 			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>String str = "";</div>
+					<div>for (int i = 0; i < 10000; i++) {</div>
+					<div class="right_1">str += i;     //相当于产生了10000个String对象</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>String str = "";</td>
-						</tr>
-						<tr>
-							<td>for (int i = 0; i < 10000; i++) {</td>
-						</tr>
-						<tr>
-							<td class="right_1">str += i;     //相当于产生了10000个String对象</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					2.静态集合类的使用
 				</li>					
 			</ul>
@@ -57,7 +54,7 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					3.各种连接对象(IO流对象、数据库连接对象、网络连接对象)未关闭
 				</li>					
 			</ul>
@@ -67,7 +64,7 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					4.监听器的使用
 				</li>					
 			</ul>

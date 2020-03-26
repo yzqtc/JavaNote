@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>运算符</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,24 +14,6 @@
         <center>
 			<h1>运算符</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.概念</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.运算符分类 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#3">3.算术运算符 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#4">4.赋值及其扩展赋值运算符</a></li>
-        		<li class="fontsize_1 null_string"><a href="#5">5.关系运算符</a></li>
-        		<li class="fontsize_1 null_string"><a href="#6">6.逻辑运算符</a></li>
-        		<li class="fontsize_1 null_string"><a href="#7">7.位运算符</a></li>
-        		<li class="fontsize_1 null_string"><a href="#8">8.字符串连接符</a></li>
-        		<li class="fontsize_1 null_string"><a href="#9">9.条件运算符</a></li>
-        		<li class="fontsize_1 null_string"><a href="#10">10.instanceof运算符</a></li>
-        		<li class="fontsize_1 null_string"><a href="#11">11.运算符优先级</a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">概念</li>					
@@ -48,7 +30,7 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="1000px" height="150px">
+					<table class="margin_left40" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="800px" height="150px">
 						<tr align="left">
 							<td rowspan="2">算术运算符</td>
 							<td>二元运算符</td>
@@ -109,10 +91,10 @@
 				</li>
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					①.如果两个操作数有一个为long,则结果为long
 				</li>
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					②.没有long时，结果为int。即使操作数全为short，byte，结果也是
 				</li>
 			</ul>
@@ -122,10 +104,10 @@
 				</li>
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					①.如果两个操作数有一个为double,则结果为double
 				</li>
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					②.如果两个操作数都是float，则结果才为float
 				</li>
 			</ul>
@@ -135,10 +117,10 @@
 				</li>
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					①.其操作数可以为浮点数，一般使用整数，结果是"余数","余数"符号和左边操作数相同，如:7%3=1，-7%3=-1，7%-3=1
 				</li>
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					②.算术运算符中++，--属于一元运算符，该类运算符只需要一个操作数
 				</li>
 			</ul>
@@ -147,30 +129,25 @@
 					[示例1]一元运算符++与--:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>int a = 3;</td>
-						</tr>
-						<tr>
-							<td>int b = a++; //执行完后,b=3。先给b赋值,再自增</td>
-						</tr>
-						<tr>
-							<td>System.out.println("a="+a+"\nb="+b); //a=4 b=3</td>
-						</tr>
-						<tr>
-							<td>a = 3;</td>
-						</tr>
-						<tr>
-							<td>b = ++a; //执行完后，b=4。a先自增,再给b赋值</td>
-						</tr>
-						<tr>
-							<td>System.out.println("a="+a+"\nb="+b); //a=4 b=4</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>int a = 3;</div>
+					<div>int b = a++; //执行完后,b=3。先给b赋值,再自增</div>
+					<div>System.out.println("a="+a+"\nb="+b); //a=4 b=3</div>
+					<div>a = 3;</div>
+					<div>b = ++a; //执行完后，b=4。a先自增,再给b赋值</div>
+					<div>System.out.println("a="+a+"\nb="+b); //a=4 b=4</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul>
 				<li id="4" class="fontsize thick">
 					赋值及其扩展赋值运算符
@@ -178,7 +155,7 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="600px" height="150px">
+					<table class="margin_left40" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="600px" height="150px">
 						<tr align="left">
 							<td class="width_200">运算符</td>
 							<td class="width_200">用法举例</td>
@@ -217,33 +194,27 @@
 					[示例2]扩展运算符:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>int a = 3;</td>
-						</tr>
-						<tr>
-							<td>int b = 4;</td>
-						</tr>
-						<tr>
-							<td>a += b; //相当于a=a+b;</td>
-						</tr>
-						<tr>
-							<td>System.out.println("a="+a+"\nb="+b); //a=7 b=4</td>
-						</tr>
-						<tr>
-							<td>a = 3;</td>
-						</tr>
-						<tr>
-							<td>a *= b+3; //相当于a=a*(b+3);</td>
-						</tr>
-						<tr>
-							<td>System.out.println("a="+a+"\nb="+b); //a=21 b=4</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>int a = 3;</div>
+					<div>int b = 4;</div>
+					<div>a += b; //相当于a=a+b;</div>
+					<div>System.out.println("a="+a+"\nb="+b); //a=7 b=4</div>
+					<div>a = 3;</div>
+					<div>a *= b+3; //相当于a=a*(b+3);</div>
+					<div>System.out.println("a="+a+"\nb="+b); //a=21 b=4</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul>
 				<li id="5" class="fontsize thick">
 					关系运算符
@@ -256,7 +227,7 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="600px" height="150px">
+					<table class="margin_left40" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="600px" height="150px">
 						<tr align="left">
 							<td class="width_200">运算符</td>
 							<td class="width_200">含义</td>
@@ -296,7 +267,7 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string color_red">
 					注意事项:
 				</li>
 				<li class="fontsize string_1 null_string">
@@ -321,7 +292,7 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="700px" height="150px">
+					<table class="margin_left40" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="700px" height="150px">
 						<tr align="left">
 							<td colspan="2">运算符</td>
 							<td class="width_200">说明</td>
@@ -369,30 +340,25 @@
 					[示例3]短路与和逻辑与:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>//1 > 2的结果为false，那么整个表达式的结果即为false，将不再计算2 > (3/0)</td>
-						</tr>
-						<tr>
-							<td>boolean c = 1 > 2 && 2 > (3/0);</td>
-						</tr>
-						<tr>
-							<td>System.out.println(c);</td>
-						</tr>
-						<tr>
-							<td>//1 > 2的结果为false，那么整个表达式的结果即为false，还要计算2 > (3/0)，0不能负除数，会输出异常信息</td>
-						</tr>
-						<tr>
-							<td>boolean d = 1 > 2 & 2 > (3/0);</td>
-						</tr>
-						<tr>
-							<td>System.out.println(d);</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>//1 > 2的结果为false，那么整个表达式的结果即为false，将不再计算2 > (3/0)</div>
+					<div>boolean c = 1 > 2 && 2 > (3/0);</div>
+					<div>System.out.println(c);</div>
+					<div>//1 > 2的结果为false，那么整个表达式的结果即为false，还要计算2 > (3/0)，0不能负除数，会输出异常信息</div>
+					<div>boolean d = 1 > 2 & 2 > (3/0);</div>
+					<div>System.out.println(d);</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul>
 				<li id="7" class="fontsize thick">
 					位运算符
@@ -405,7 +371,7 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="500px" height="150px">
+					<table class="margin_left40" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="500px" height="150px">
 						<tr align="left">
 							<td class="width_100">位运算符</td>
 							<td class="width_100">说明</td>
@@ -442,26 +408,23 @@
 					[示例4]左移运算和右移运算:
 				</li>					
 			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+				</div>
+				<div class="fontsize" id="codediv_4">
+					<div>int a = 3*2*2;</div>
+					<div>int b = 3 << 2;//相当于3*2*2</div>
+					<div>int c = 12/2/2;</div>
+					<div>int d = 12 >> 2;//相当于12/2/2</div>
+				</div>
+				<div class="copy" id="copy_4" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_4">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>int a = 3*2*2;</td>
-						</tr>
-						<tr>
-							<td>int b = 3 << 2;//相当于3*2*2</td>
-						</tr>
-						<tr>
-							<td>int c = 12/2/2;</td>
-						</tr>
-						<tr>
-							<td>int d = 12 >> 2;//相当于12/2/2</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string color_red">
 					注意事项:
 				</li>
 				<li class="fontsize string_1 null_string">
@@ -484,18 +447,17 @@
 					[示例5]连接符"+":
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>int a = 12;</td>
-						</tr>
-						<tr>
-							<td>System.out.println("a="+a);//输出结果a=12</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+				</div>
+				<div class="fontsize" id="codediv_5">
+					<div>int a = 12;</div>
+					<div>System.out.println("a="+a);//输出结果a=12</div>
+				</div>
+				<div class="copy" id="copy_5" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_5">复制</div>
+			</div>
 			<ul>
 				<li id="9" class="fontsize thick">条件运算符</li>					
 			</ul>
@@ -504,15 +466,15 @@
 					语法格式:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>x ? y : z</td>
-						</tr>
-					</table>
-				</li>
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+				</div>
+				<div class="fontsize" id="codediv_6">
+					<div>x ? y : z</div>
+				</div>
+				<div class="copy" id="copy_6" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_6">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					其中x为boolean类型表达式，先计算x的值，若为true，则整个运算的结果为表达式y的值，否则整个运算的结果为表达式z的值
@@ -523,30 +485,25 @@
 					[示例6]三目条件运算符:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>int score = 80;</td>
-						</tr>
-						<tr>
-							<td>int x = -100;</td>
-						</tr>
-						<tr>
-							<td>String type = score < 60 ? "不及格" : "及格";</td>
-						</tr>
-						<tr>
-							<td>int flag = x > 0 ? 1 : (x == 0 ? 0 : -1);</td>
-						</tr>
-						<tr>
-							<td>System.out.println("type="+type);//type=及格</td>
-						</tr>
-						<tr>
-							<td>System.out.println("flag="+flag);//flag=-1</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+				</div>
+				<div class="fontsize" id="codediv_7">
+					<div>int score = 80;</div>
+					<div>int x = -100;</div>
+					<div>String type = score < 60 ? "不及格" : "及格";</div>
+					<div>int flag = x > 0 ? 1 : (x == 0 ? 0 : -1);</div>
+					<div>System.out.println("type="+type);//type=及格</div>
+					<div>System.out.println("flag="+flag);//flag=-1</div>
+				</div>
+				<div class="copy" id="copy_7" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_7">复制</div>
+			</div>
 			<ul>
 				<li id="10" class="fontsize thick">instanceof 运算符</li>					
 			</ul>
@@ -560,33 +517,27 @@
 					[示例7]使用instanceof运算符进行类型判断:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test{</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">Student s = new Student("ywh",172,"Java");</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(s instanceof Person);</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(s instanceof Student);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_8">
+					<div>public class Test{</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Student s = new Student("ywh",172,"Java");</div>
+					<div class="right_2">System.out.println(s instanceof Person);</div>
+					<div class="right_2">System.out.println(s instanceof Student);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_8" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_8">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					两条语句的输出结果都是true。
@@ -597,7 +548,7 @@
 			</ul>
 			<ul class="ul">
 				<li class="fontsize">
-					<table class="margin_left50" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="750px" height="150px">
+					<table class="margin_left40" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="750px" height="150px">
 						<tr align="left">
 							<td class="width_60">优先级</td>
 							<td class="width_260">运算符</td>
@@ -704,13 +655,13 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string color_red">
 					注意事项:
 				</li>
-				<li class="fontsize string_1 null_string">
+				<li class="fontsize string_1">
 					不需要刻意记住这些优先级，表达式里面优先使用小括号来组织
 				</li>
-				<li class="fontsize string_1 null_string">
+				<li class="fontsize string_1">
 					逻辑与、逻辑或、逻辑非的优先级一定要熟悉(逻辑非>逻辑与>逻辑或)，如：a||b&&c的运算结果是：a||(b&&c),而不是(a||b)&&c
 				</li>
 			</ul>

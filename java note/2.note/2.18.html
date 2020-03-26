@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>导入类import</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -26,7 +26,7 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize null_string color_red">
 					注意要点:
 				</li>					
 			</ul>
@@ -40,65 +40,53 @@
 					2.如果导入两个同名的类，只能用包名+类名来显示调用相关类:
 				</li>					
 			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>java.util.Date date  = new  java.util.Date();</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>java.util.Date date  = new  java.util.Date();</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
-			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize string_1">
 					[示例]导入同名类的处理:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>import java.sql.Date;</td>
-						</tr>
-						<tr>
-							<td>import java.util.*;//导入该包下所有的类。会降低编译速度，但不会降低运行速度。</td>
-						</tr>
-						<tr>
-							<td>public class Test{</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">//这里指的是java.sql.Date</td>
-						</tr>
-						<tr>
-							<td class="right_2">Date now;</td>
-						</tr>
-						<tr>
-							<td class="right_2">//java.util.Date因为和java.sql.Date类同名，需要完整路径</td>
-						</tr>
-						<tr>
-							<td class="right_2">java.util.Date  now2 = new java.util.Date();</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(now2);</td>
-						</tr>
-						<tr>
-							<td class="right_2">//java.util包的非同名类不需要完整路径</td>
-						</tr>
-						<tr>
-							<td class="right_2">Scanner input = new Scanner(System.in);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>import java.sql.Date;</div>
+					<div>import java.util.*;//导入该包下所有的类。会降低编译速度，但不会降低运行速度。</div>
+					<div>public class Test{</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">//这里指的是java.sql.Date</div>
+					<div class="right_2">Date now;</div>
+					<div class="right_2">//java.util.Date因为和java.sql.Date类同名，需要完整路径</div>
+					<div class="right_2">java.util.Date  now2 = new java.util.Date();</div>
+					<div class="right_2">System.out.println(now2);</div>
+					<div class="right_2">//java.util包的非同名类不需要完整路径</div>
+					<div class="right_2">Scanner input = new Scanner(System.in);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul>
 				<li class="fontsize null_string thick">
 					静态导入
@@ -110,46 +98,37 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize null_string">
 					[示例]静态导入的使用:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>package cn.sxt;</td>
-						</tr>
-						<tr>
-							<td>//以下两种静态导入的方式二选一即可</td>
-						</tr>
-						<tr>
-							<td>import static java.lang.Math.*;//导入Math类的所有静态属性</td>
-						</tr>
-						<tr>
-							<td>import static java.lang.Math.PI;//导入Math类的PI属性</td>
-						</tr>
-						<tr>
-							<td>public class Test{</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(PI);</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(random());</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>package cn.sxt;</div>
+					<div>//以下两种静态导入的方式二选一即可</div>
+					<div>import static java.lang.Math.*;//导入Math类的所有静态属性</div>
+					<div>import static java.lang.Math.PI;//导入Math类的PI属性</div>
+					<div>public class Test{</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">System.out.println(PI);</div>
+					<div class="right_2">System.out.println(random());</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/2.18_1.png" />

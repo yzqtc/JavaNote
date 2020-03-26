@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Object类</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,15 +14,6 @@
         <center>
 			<h1>Object类</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.Object类基本特性</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.toString方法 </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">Object类基本特性</li>					
@@ -33,37 +24,31 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize null_string">
 					[示例]Object类:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Person {</td>
-						</tr>
-						<tr>
-							<td class="right_1">...</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>//等价于:</td>
-						</tr>
-						<tr>
-							<td>public class Person extends Object {</td>
-						</tr>
-						<tr>
-							<td class="right_1">...</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class Person {</div>
+					<div class="right_1">...</div>
+					<div>}</div>
+					<div>//等价于:</div>
+					<div>public class Person extends Object {</div>
+					<div class="right_1">...</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul>
 				<li id="2" class="fontsize thick">toString方法</li>					
 			</ul>
@@ -72,91 +57,72 @@
 					Object类中定义有public String toString()方法，其返回值是 String 类型。Object类中toString方法的源码为:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public String toString() {</td>
-						</tr>
-						<tr>
-							<td class="right_1">return getClass().getName() + "@" + Integer.toHexString(hashCode());</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public String toString() {</div>
+					<div class="right_1">return getClass().getName() + "@" + Integer.toHexString(hashCode());</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					根据如上源码得知，默认会返回“类名+@+16进制的hashcode”。在打印输出或者用字符串连接对象时，会自动调用该对象的toString()方法。
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize null_string">
 					[示例]toString()方法测试和重写toString()方法:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>class Person {</td>
-						</tr>
-						<tr>
-							<td class="right_1">String name;</td>
-						</tr>
-						<tr>
-							<td class="right_1">int age;</td>
-						</tr>
-						<tr>
-							<td class="right_1">@Override</td>
-						</tr>
-						<tr>
-							<td class="right_1">public String toString() {</td>
-						</tr>
-						<tr>
-							<td class="right_2">return name+",年龄："+age;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-						<tr>
-							<td>public class Test {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">Person p=new Person();</td>
-						</tr>
-						<tr>
-							<td class="right_2">p.age=20;</td>
-						</tr>
-						<tr>
-							<td class="right_2">p.name="李东";</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("info:"+p);</td>
-						</tr>
-						<tr>
-							<td class="right_2">Test t = new Test();</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(t);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>class Person {</div>
+					<div class="right_1">String name;</div>
+					<div class="right_1">int age;</div>
+					<div class="right_1">@Override</div>
+					<div class="right_1">public String toString() {</div>
+					<div class="right_2">return name+",年龄："+age;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Person p=new Person();</div>
+					<div class="right_2">p.age=20;</div>
+					<div class="right_2">p.name="李东";</div>
+					<div class="right_2">System.out.println("info:"+p);</div>
+					<div class="right_2">Test t = new Test();</div>
+					<div class="right_2">System.out.println(t);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/2.20_1.png" />

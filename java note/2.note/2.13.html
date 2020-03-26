@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>this关键字</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -15,12 +15,14 @@
 			<h1>this关键字</h1>  
         </center>
 		<div>
-			<ul>
-				<li id="1" class="fontsize thick">对象创建的过程和this的本质</li>					
-			</ul>
 			<ul class="ul">
 				<li class="fontsize null_string">
-					构造方法是创建Java对象的重要途径，通过new关键字调用构造器时，构造器也确实返回该类的对象，但这个对象并不是完全由构造器负责创建。创建一个对象分为如下四步：
+					构造方法是创建Java对象的重要途径，通过new关键字调用构造器时，构造器也确实返回该类的对象，但这个对象并不是完全由构造器负责创建。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					创建一个对象分为如下四步:
 				</li>					
 			</ul>
 			<ul class="ul">
@@ -49,7 +51,7 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string thick">
 					this最常的用法:
 				</li>					
 			</ul>
@@ -69,176 +71,130 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					[示例1]this代表"当前对象"示例:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class User {</td>
-						</tr>
-						<tr>
-							<td class="right_1">int id; //id</td>
-						</tr>
-						<tr>
-							<td class="right_1">String name;  //账户名</td>
-						</tr>
-						<tr>
-							<td class="right_1">String pwd;   //密码</td>
-						</tr>
-						<tr>
-							<td class="right_1">public User() {</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public User(int id, String name) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("正在初始化已经创建好的对象："+this);</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.id = id;   //不写this，无法区分局部变量id和成员变量id</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.name = name;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public void login(){</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(this.name+",要登录！");  //不写this效果一样</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">User  u3 = new User(101,"高小七");</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("打印高小七对象："+u3);</td>
-						</tr>
-						<tr>
-							<td class="right_2">u3.login();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class User {</div>
+					<div class="right_1">int id; //id</div>
+					<div class="right_1">String name;  //账户名</div>
+					<div class="right_1">String pwd;   //密码</div>
+					<div class="right_1">public User() {</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public User(int id, String name) {</div>
+					<div class="right_2">System.out.println("正在初始化已经创建好的对象："+this);</div>
+					<div class="right_2">this.id = id;   //不写this，无法区分局部变量id和成员变量id</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void login(){</div>
+					<div class="right_2">System.out.println(this.name+",要登录！");  //不写this效果一样</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">User  u3 = new User(101,"高小七");</div>
+					<div class="right_2">System.out.println("打印高小七对象："+u3);</div>
+					<div class="right_2">u3.login();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize string_1">
 					<img src="../img/2.13_1.png" />
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					[示例2]this()调用重载构造方法:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class TestThis {</td>
-						</tr>
-						<tr>
-							<td class="right_1">int a, b, c;</td>
-						</tr>
-						<tr>
-							<td class="right_1">TestThis() {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("正要初始化一个Hello对象");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">TestThis(int a, int b) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">// TestThis(); //这样是无法调用构造方法的！</td>
-						</tr>
-						<tr>
-							<td class="right_2">this(); // 调用无参的构造方法，并且必须位于第一行！</td>
-						</tr>
-						<tr>
-							<td class="right_2">a = a;// 这里都是指的局部变量而不是成员变量</td>
-						</tr>
-						<tr>
-							<td class="right_2">// 这样就区分了成员变量和局部变量. 这种情况占了this使用情况大多数！</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.a = a;</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.b = b;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">TestThis(int a, int b, int c) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">this(a, b); // 调用带参的构造方法，并且必须位于第一行！</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.c = c;</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">void sing() {</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">void eat() {</td>
-						</tr>
-						<tr>
-							<td class="right_2">this.sing(); // 调用本类中的sing();</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("你妈妈喊你回家吃饭！");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">TestThis hi = new TestThis(2, 3);</td>
-						</tr>
-						<tr>
-							<td class="right_2">hi.eat();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class TestThis {</div>
+					<div class="right_1">int a, b, c;</div>
+					<div class="right_1">TestThis() {</div>
+					<div class="right_2">System.out.println("正要初始化一个Hello对象");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">TestThis(int a, int b) {</div>
+					<div class="right_2">// TestThis(); //这样是无法调用构造方法的！</div>
+					<div class="right_2">this(); // 调用无参的构造方法，并且必须位于第一行！</div>
+					<div class="right_2">a = a;// 这里都是指的局部变量而不是成员变量</div>
+					<div class="right_2">// 这样就区分了成员变量和局部变量. 这种情况占了this使用情况大多数！</div>
+					<div class="right_2">this.a = a;</div>
+					<div class="right_2">this.b = b;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">TestThis(int a, int b, int c) {</div>
+					<div class="right_2">this(a, b); // 调用带参的构造方法，并且必须位于第一行！</div>
+					<div class="right_2">this.c = c;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">void sing() {</div>
+					<div class="right_1">}</div>
+					<div class="right_1">void eat() {</div>
+					<div class="right_2">this.sing(); // 调用本类中的sing();</div>
+					<div class="right_2">System.out.println("你妈妈喊你回家吃饭！");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">TestThis hi = new TestThis(2, 3);</div>
+					<div class="right_2">hi.eat();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 		</div>
 	</body>
 </html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>封装</title>
+	</head>
+	<script type="text/javascript" src="../js/index/import.js"></script>
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-18
+        	描述：封装
+        -->
+        <center>
+			<h1>封装</h1>  
+        </center>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">封装的作用和含义</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					封装就是把对象的属性和操作结合为一个独立的整体，并尽可能隐藏对象的内部实现细节。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					我们程序设计要追求“高内聚，低耦合”。 高内聚就是类的内部数据操作细节自己完成，不允许外部干涉;低耦合是仅暴露少量的方法给外部使用，尽量方便外部调用。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					编程中封装的具体优点:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.提高代码的安全性
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.提高代码的复用性
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3.“高内聚”：封装细节，便于修改内部代码，提高可维护性
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					4.“低耦合”：简化外部调用，便于调用者使用，便于扩展和协作
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]没有封装的代码会出现一些问题:
+				</li>					
+			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>class Person {</div>
+					<div class="right_1">String name;</div>
+					<div class="right_1">int age;</div>
+					<div class="right_1">@Override</div>
+					<div class="right_1">public String toString() {</div>
+					<div class="right_2">return "Person [name=" + name + ", age=" + age + "]";</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>public class Test {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Person p = new Person();</div>
+					<div class="right_2">p.name = "小红";</div>
+					<div class="right_2">p.age = -45;//年龄可以通过这种方式随意赋值，没有任何限制</div>
+					<div class="right_2">System.out.println(p);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					我们都知道，年龄不可能是负数，也不可能超过130岁，但是如果没有使用封装的话，便可以给年龄赋值成任意的整数，这显然不符合我们的正常逻辑思维。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					<img src="../img/2.24_1.png" />
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					再比如说，如果哪天我们需要将Person类中的age属性修改为String类型的，你会怎么办?你只有一处使用了这个类的话那还比较幸运，但如果你有几十处甚至上百处都用到了，那你岂不是要改到崩溃。而封装恰恰能解决这样的问题。如果使用封装，我们只需要稍微修改下Person类的setAge()方法即可，而无需修改使用了该类的客户代码。
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">封装的实现—使用访问控制符</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Java是使用“访问控制符”来控制哪些细节需要封装，哪些细节需要暴露的。 Java中4种“访问控制符”分别为private、default、protected、public，它们说明了面向对象的封装性，所以我们要利用它们尽可能的让访问权限降到最低，从而提高安全性。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize">
+					<table class="margin_left40" border="1px solid" bordercolor="#d0d0d0" cellpadding="0" cellspacing="0" width="500px" height="150px">
+						<tr align="center">
+							<td colspan="5">访问权限修饰符</td>
+						</tr>
+						<tr align="center">
+							<td width="100px">修饰符</td>
+							<td width="100px">同一个类</td>
+							<td width="100px">同一个包中</td>
+							<td width="100px">子类</td>
+							<td width="100px">所有类</td>
+						</tr>
+						<tr align="center">
+							<td>private</td>
+							<td>*</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr align="center">
+							<td>default</td>
+							<td>*</td>
+							<td>*</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr align="center">
+							<td>protected</td>
+							<td>*</td>
+							<td>*</td>
+							<td>*</td>
+							<td></td>
+						</tr>
+						<tr align="center">
+							<td>public</td>
+							<td>*</td>
+							<td>*</td>
+							<td>*</td>
+							<td>*</td>
+						</tr>
+					</table>
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					1.private 表示私有，只有自己类能访问
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					2.default表示没有修饰符修饰，只有同一个包的类能访问
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					3.protected表示可以被同一个包的类以及其他包中的子类访问
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					4.public表示可以被该项目的所有包中的所有类访问
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					下面做进一步说明Java中4种访问权限修饰符的区别：首先我们创建4个类：Person类、Student类、Animal类和Computer类，分别比较本类、本包、子类、其他包的区别。
+				</li>					
+			</ul>
+			<ul>
+				<li id="3" class="fontsize thick">封装的使用细节</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					类的属性的处理:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.一般使用private访问权限
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.提供相应的get/set方法来访问相关属性，这些方法通常是public修饰的，以提供对属性的赋值与读取操作(注意：boolean变量的get方法是is开头!)
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3.一些只用于本类的辅助性方法可以用private修饰，希望其他类调用的方法用public修饰
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]JavaBean的封装实例:
+				</li>					
+			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class Person {</div>
+					<div class="right_1">// 属性一般使用private修饰</div>
+					<div class="right_1">private String name;</div>
+					<div class="right_1">private int age;</div>
+					<div class="right_1">private boolean flag;</div>
+					<div class="right_1">// 为属性提供public修饰的set/get方法</div>
+					<div class="right_1">public String getName() {</div>
+					<div class="right_2">return name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void setName(String name) {</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public int getAge() {</div>
+					<div class="right_2">return age;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void setAge(int age) {</div>
+					<div class="right_2">this.age = age;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public boolean isFlag() {// 注意：boolean类型的属性get方法是is开头的</div>
+					<div class="right_2">return flag;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void setFlag(boolean flag) {</div>
+					<div class="right_2">this.flag = flag;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					[示例]使用封装来解决年龄非法赋值的问题:
+				</li>					
+			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+					<div class="code_number_border">29</div>
+					<div class="code_number_border">30</div>
+					<div class="code_number_border">31</div>
+					<div class="code_number_border">32</div>
+					<div class="code_number_border">33</div>
+					<div class="code_number_border">34</div>
+					<div class="code_number_border">35</div>
+					<div class="code_number_border">36</div>
+					<div class="code_number_border">37</div>
+					<div class="code_number_border">38</div>
+					<div class="code_number_border">39</div>
+					<div class="code_number_border">40</div>
+					<div class="code_number_border">41</div>
+					<div class="code_number_border">42</div>
+					<div class="code_number_border">43</div>
+					<div class="code_number_border">44</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>class Person {</div>
+					<div class="right_1">private String name;</div>
+					<div class="right_1">private int age;</div>
+					<div class="right_1">public Person() {</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public Person(String name, int age) {</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_2">// this.age = age;//构造方法中不能直接赋值，应该调用setAge方法</div>
+					<div class="right_2">setAge(age);</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void setName(String name) {</div>
+					<div class="right_2">this.name = name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public String getName() {</div>
+					<div class="right_2">return name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public int getAge() {</div>
+					<div class="right_2">return age;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void setAge(int age) {</div>
+					<div class="right_2">//在赋值之前先判断年龄是否合法</div>
+					<div class="right_2">if (age > 130 || age < 0) {</div>
+					<div class="right_3">this.age = 18;//不合法赋默认值18</div>
+					<div class="right_2">} else {</div>
+					<div class="right_3">this.age = age;//合法才能赋值给属性age</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div class="right_1">@Override</div>
+					<div class="right_1">public String toString() {</div>
+					<div class="right_2">return "Person [name=" + name + ", age=" + age + "]";</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>public class Test2 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Person p1 = new Person();</div>
+					<div class="right_2">//p1.name = "小红"; //编译错误</div>
+					<div class="right_2">//p1.age = -45;  //编译错误</div>
+					<div class="right_2">p1.setName("小红");</div>
+					<div class="right_2">p1.setAge(-45);</div>
+					<div class="right_2">System.out.println(p1);</div>
+					<div class="right_2">Person p2 = new Person("小白", 300);</div>
+					<div class="right_2">System.out.println(p2);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					<img src="../img/2.24_3.png" />
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>控制语句-选泽结构</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,17 +14,6 @@
         <center>
 			<h1>控制语句-选泽结构</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.if单选泽结构</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.if-else双选择结构 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#3">3.if-else if-else多选择结构 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#4">4.switch多选择结构 </a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">if单选泽结构</li>					
@@ -34,21 +23,19 @@
 					语法结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>if(布尔表达式){</td>
-						</tr>
-						<tr>
-							<td class="right_1">语句块</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>if(布尔表达式){</div>
+					<div class="right_1">语句块</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					if语句对布尔表达式进行一次判定，若判定为真，则执行{}中的语句块，否则跳过该语句块。流程图如图所示
@@ -64,78 +51,57 @@
 					[示例1]if单选择结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test1 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2"> //通过掷三个骰子看看今天的手气如何？</td>
-						</tr>
-						<tr>
-							<td class="right_2">int i = (int)(6 * Math.random()) + 1;//通过Math.random()产生随机数</td>
-						</tr>
-						<tr>
-							<td class="right_2">int j = (int)(6 * Math.random()) + 1;</td>
-						</tr>
-						<tr>
-							<td class="right_2">int k = (int)(6 * Math.random()) + 1;</td>
-						</tr>
-						<tr>
-							<td class="right_2">int count = i + j + k;</td>
-						</tr>
-						<tr>
-							<td class="right_2">//如果三个骰子之和大于15，则手气不错</td>
-						</tr>
-						<tr>
-							<td class="right_2">if(count > 15) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("今天手气不错");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">//如果三个骰子之和在10到15之间，则手气一般</td>
-						</tr>
-						<tr>
-							<td class="right_2">if(count >= 10 && count <= 15) { //错误写法：10<=count<=15</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("今天手气很一般");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">//如果三个骰子之和小于10，则手气不怎么样</td>
-						</tr>
-						<tr>
-							<td class="right_2">if(count < 10) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("今天手气不怎么样");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("得了" + count + "分");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class Test1 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2"> //通过掷三个骰子看看今天的手气如何？</div>
+					<div class="right_2">int i = (int)(6 * Math.random()) + 1;//通过Math.random()产生随机数</div>
+					<div class="right_2">int j = (int)(6 * Math.random()) + 1;</div>
+					<div class="right_2">int k = (int)(6 * Math.random()) + 1;</div>
+					<div class="right_2">int count = i + j + k;</div>
+					<div class="right_2">//如果三个骰子之和大于15，则手气不错</div>
+					<div class="right_2">if(count > 15) {</div>
+					<div class="right_3">System.out.println("今天手气不错");</div>
+					<div class="right_2">}</div>
+					<div class="right_2">//如果三个骰子之和在10到15之间，则手气一般</div>
+					<div class="right_2">if(count >= 10 && count <= 15) { //错误写法：10<=count<=15</div>
+					<div class="right_3">System.out.println("今天手气很一般");</div>
+					<div class="right_2">}</div>
+					<div class="right_2">//如果三个骰子之和小于10，则手气不怎么样</div>
+					<div class="right_2">if(count < 10) {</div>
+					<div class="right_3">System.out.println("今天手气不怎么样");</div>
+					<div class="right_2">}</div>
+					<div class="right_2">System.out.println("得了" + count + "分");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.19_2.png" />
@@ -149,27 +115,23 @@
 					语法结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>if(布尔表达式){</td>
-						</tr>
-						<tr>
-							<td class="right_1">语句块1</td>
-						</tr>
-						<tr>
-							<td>}else{</td>
-						</tr>
-						<tr>
-							<td class="right_1">语句块1</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>if(布尔表达式){</div>
+					<div class="right_1">语句块1</div>
+					<div>}else{</div>
+					<div class="right_1">语句块1</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					当布尔表达式为真时，执行语句块1，否则，执行语句块2。也就是else部分。流程图如图所示
@@ -185,66 +147,49 @@
 					[示例2]if-else结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test2 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">//随机产生一个[0.0, 4.0)区间的半径，并根据半径求圆的面积和周长</td>
-						</tr>
-						<tr>
-							<td class="right_2">double r = 4 * Math.random();</td>
-						</tr>
-						<tr>
-							<td class="right_2">//Math.pow(r, 2)求半径r的平方</td>
-						</tr>
-						<tr>
-							<td class="right_2">double area = Math.PI * Math.pow(r, 2);</td>
-						</tr>
-						<tr>
-							<td class="right_2">double circle = 2 * Math.PI * r;</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("半径为： " + r);</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("面积为： " + area);</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("周长为： " + circle);</td>
-						</tr>
-						<tr>
-							<td class="right_2">//如果面积>=周长，则输出"面积大于等于周长"，否则，输出周长大于面积</td>
-						</tr>
-						<tr>
-							<td class="right_2">if(area >= circle) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("面积大于等于周长");</td>
-						</tr>
-						<tr>
-							<td class="right_2">} else {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("周长大于面积");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+				</div>
+				<div class="fontsize" id="codediv_4">
+					<div>public class Test2 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">//随机产生一个[0.0, 4.0)区间的半径，并根据半径求圆的面积和周长</div>
+					<div class="right_2">double r = 4 * Math.random();</div>
+					<div class="right_2">//Math.pow(r, 2)求半径r的平方</div>
+					<div class="right_2">double area = Math.PI * Math.pow(r, 2);</div>
+					<div class="right_2">double circle = 2 * Math.PI * r;</div>
+					<div class="right_2">System.out.println("半径为： " + r);</div>
+					<div class="right_2">System.out.println("面积为： " + area);</div>
+					<div class="right_2">System.out.println("周长为： " + circle);</div>
+					<div class="right_2">//如果面积>=周长，则输出"面积大于等于周长"，否则，输出周长大于面积</div>
+					<div class="right_2">if(area >= circle) {</div>
+					<div class="right_3">System.out.println("面积大于等于周长");</div>
+					<div class="right_2">} else {</div>
+					<div class="right_3">System.out.println("周长大于面积");</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_4" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_4">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.19_4.png" />
@@ -260,45 +205,35 @@
 					[示例3]使用if-else:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test3 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int a=2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">int b=3;</td>
-						</tr>
-						<tr>
-							<td class="right_2">if (a<b) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println(a);</td>
-						</tr>
-						<tr>
-							<td class="right_2">} else {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println(b);</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+				</div>
+				<div class="fontsize" id="codediv_5">
+					<div>public class Test3 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int a=2;</div>
+					<div class="right_2">int b=3;</div>
+					<div class="right_2">if (a < b) {</div>
+					<div class="right_3">System.out.println(a);</div>
+					<div class="right_2">} else {</div>
+					<div class="right_3">System.out.println(b);</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_5" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_5">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.19_5.png" />
@@ -309,33 +244,27 @@
 					[示例4]使用if-else:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test4 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int a=2;</td>
-						</tr>
-						<tr>
-							<td class="right_2">int b=3;</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println( (a < b) ? a : b);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_6">
+					<div>public class Test4 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int a=2;</div>
+					<div class="right_2">int b=3;</div>
+					<div class="right_2">System.out.println( (a < b) ? a : b);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_6" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_6">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.19_6.png" />
@@ -349,42 +278,33 @@
 					语法结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>if(布尔表达式1){</td>
-						</tr>
-						<tr>
-							<td class="right_1">语句块1</td>
-						</tr>
-						<tr>
-							<td>} else if(布尔表达式2) {</td>
-						</tr>
-						<tr>
-							<td class="right_1">语句块2</td>
-						</tr>
-						<tr>
-							<td>}……</td>
-						</tr>
-						<tr>
-							<td>else if(布尔表达式n){</td>
-						</tr>
-						<tr>
-							<td class="right_1">语句块n</td>
-						</tr>
-						<tr>
-							<td>} else {</td>
-						</tr>
-						<tr>
-							<td class="right_1">语句块n+1</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+				</div>
+				<div class="fontsize" id="codediv_7">
+					<div>if(布尔表达式1){</div>
+					<div class="right_1">语句块1</div>
+					<div>} else if(布尔表达式2) {</div>
+					<div class="right_1">语句块2</div>
+					<div>}……</div>
+					<div>else if(布尔表达式n){</div>
+					<div class="right_1">语句块n</div>
+					<div>} else {</div>
+					<div class="right_1">语句块n+1</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_7" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_7">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					当布尔表达式1为真时，执行语句块1;否则，判断布尔表达式2，当布尔表达式2为真时，执行语句块2;否则，继续判断布尔表达式3······;如果1~n个布尔表达式均判定为假时，则执行语句块n+1，也就是else部分。流程图如图所示
@@ -400,69 +320,51 @@
 					[示例5]使用if-else:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test5 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int age = (int) (100 * Math.random());</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.print("年龄是" + age + "， 属于");</td>
-						</tr>
-						<tr>
-							<td class="right_2"> if (age < 15) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("儿童， 喜欢玩！");</td>
-						</tr>
-						<tr>
-							<td class="right_2">} else if (age < 25) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("青年， 要学习！");</td>
-						</tr>
-						<tr>
-							<td class="right_2">} else if (age < 45) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("中年， 要工作！");</td>
-						</tr>
-						<tr>
-							<td class="right_2">} else if (age < 65) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("中老年， 要补钙！");</td>
-						</tr>
-						<tr>
-							<td class="right_2">} else if (age < 85) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("老年， 多运动！");</td>
-						</tr>
-						<tr>
-							<td class="right_2">} else {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("老寿星， 古来稀！");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+				</div>
+				<div class="fontsize" id="codediv_8">
+					<div>public class Test5 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int age = (int) (100 * Math.random());</div>
+					<div class="right_2">System.out.print("年龄是" + age + "， 属于");</div>
+					<div class="right_2"> if (age < 15) {</div>
+					<div class="right_3">System.out.println("儿童， 喜欢玩！");</div>
+					<div class="right_2">} else if (age < 25) {</div>
+					<div class="right_3">System.out.println("青年， 要学习！");</div>
+					<div class="right_2">} else if (age < 45) {</div>
+					<div class="right_3">System.out.println("中年， 要工作！");</div>
+					<div class="right_2">} else if (age < 65) {</div>
+					<div class="right_3">System.out.println("中老年， 要补钙！");</div>
+					<div class="right_2">} else if (age < 85) {</div>
+					<div class="right_3">System.out.println("老年， 多运动！");</div>
+					<div class="right_2">} else {</div>
+					<div class="right_3">System.out.println("老寿星， 古来稀！");</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_8" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_8">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.19_8.png" />
@@ -481,45 +383,35 @@
 					语法结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>switch (表达式) {</td>
-						</tr>
-						<tr>
-							<td>case 值1:</td>
-						</tr>
-						<tr>
-							<td>语句序列1</td>
-						</tr>
-						<tr>
-							<td>[break]</td>
-						</tr>
-						<tr>
-							<td>case 值2:</td>
-						</tr>
-						<tr>
-							<td>语句序列2</td>
-						</tr>
-						<tr>
-							<td>[break]</td>
-						</tr>
-						<tr>
-							<td>… …</td>
-						</tr>
-						<tr>
-							<td>[default:</td>
-						</tr>
-						<tr>
-							<td>默认语句]</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+				</div>
+				<div class="fontsize" id="codediv_9">
+					<div>switch (表达式) {</div>
+					<div>case 值1:</div>
+					<div>语句序列1</div>
+					<div>[break]</div>
+					<div>case 值2:</div>
+					<div>语句序列2</div>
+					<div>[break]</div>
+					<div>… …</div>
+					<div>[default:</div>
+					<div>默认语句]</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_9" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_9">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					switch语句会根据表达式的值从相匹配的case标签处开始执行，一直执行到break语句处或者是switch语句的末尾。如果表达式的值与任一case值不匹配，则进入default语句(如果存在default语句的情况)
@@ -550,81 +442,59 @@
 					[示例6]switch结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test6 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">char c = 'a';</td>
-						</tr>
-						<tr>
-							<td class="right_2">int rand = (int) (26 * Math.random());</td>
-						</tr>
-						<tr>
-							<td class="right_2">char c2 = (char) (c + rand);</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.print(c2 + ": ");</td>
-						</tr>
-						<tr>
-							<td class="right_2">switch (c2) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">case 'a':</td>
-						</tr>
-						<tr>
-							<td class="right_2">case 'e':</td>
-						</tr>
-						<tr>
-							<td class="right_2">case 'i':</td>
-						</tr>
-						<tr>
-							<td class="right_2">case 'o':</td>
-						</tr>
-						<tr>
-							<td class="right_2">case 'u':</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("元音");</td>
-						</tr>
-						<tr>
-							<td class="right_3">break;</td>
-						</tr>
-						<tr>
-							<td class="right_2">case 'y':</td>
-						</tr>
-						<tr>
-							<td class="right_2">case 'w':</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("半元音");</td>
-						</tr>
-						<tr>
-							<td class="right_3">break;</td>
-						</tr>
-						<tr>
-							<td class="right_2">default:</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("辅音");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+				</div>
+				<div class="fontsize" id="codediv_10">
+					<div>public class Test6 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">char c = 'a';</div>
+					<div class="right_2">int rand = (int) (26 * Math.random());</div>
+					<div class="right_2">char c2 = (char) (c + rand);</div>
+					<div class="right_2">System.out.print(c2 + ": ");</div>
+					<div class="right_2">switch (c2) {</div>
+					<div class="right_2">case 'a':</div>
+					<div class="right_2">case 'e':</div>
+					<div class="right_2">case 'i':</div>
+					<div class="right_2">case 'o':</div>
+					<div class="right_2">case 'u':</div>
+					<div class="right_3">System.out.println("元音");</div>
+					<div class="right_3">break;</div>
+					<div class="right_2">case 'y':</div>
+					<div class="right_2">case 'w':</div>
+					<div class="right_3">System.out.println("半元音");</div>
+					<div class="right_3">break;</div>
+					<div class="right_2">default:</div>
+					<div class="right_3">System.out.println("辅音");</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_10" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_10">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.19_11.png" />

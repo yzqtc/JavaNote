@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>静态初始化块</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -21,7 +21,7 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize null_string color_red">
 					注意事项:
 				</li>					
 			</ul>
@@ -36,67 +36,51 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					[示例]static初始化块:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class User {</td>
-						</tr>
-						<tr>
-							<td class="right_1">int id; // id</td>
-						</tr>
-						<tr>
-							<td class="right_1">String name; // 账户名</td>
-						</tr>
-						<tr>
-							<td class="right_1">String pwd;   //密码</td>
-						</tr>
-						<tr>
-							<td class="right_1">static String company // 公司名称</td>
-						</tr>
-						<tr>
-							<td class="right_1">static {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("执行类的初始化工作");</td>
-						</tr>
-						<tr>
-							<td class="right_2">company = "阿里巴巴";</td>
-						</tr>
-						<tr>
-							<td class="right_2">printCompany();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void printCompany(){</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println(company);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">User  u = new User();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left100 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class User {</div>
+					<div class="right_1">int id; // id</div>
+					<div class="right_1">String name; // 账户名</div>
+					<div class="right_1">String pwd;   //密码</div>
+					<div class="right_1">static String company // 公司名称</div>
+					<div class="right_1">static {</div>
+					<div class="right_2">System.out.println("执行类的初始化工作");</div>
+					<div class="right_2">company = "阿里巴巴";</div>
+					<div class="right_2">printCompany();</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public static void printCompany(){</div>
+					<div class="right_2">System.out.println(company);</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">User  u = new User();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize string_1">
 					<img src="../img/2.15_1.png" />

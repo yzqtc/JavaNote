@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>==和equals方法</title>
+	</head>
+	<script type="text/javascript" src="../js/index/import.js"></script>
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-18
+        	描述：==和equals方法
+        -->
+        <center>
+			<h1>==和equals方法</h1>  
+        </center>
+		<div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					“==”代表比较双方是否相同。如果是基本类型则表示值相等，如果是引用类型则表示地址相等即是同一个对象。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Object类中定义有：public boolean equals(Object obj)方法，提供定义“对象内容相等”的逻辑。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					Object 的 equals 方法默认就是比较两个对象的hashcode，是同一个对象的引用时返回 true 否则返回 false。但是，我们可以根据我们自己的要求重写equals方法。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]equals方法测试和自定义类重写equals方法:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+					<div class="code_number_border">22</div>
+					<div class="code_number_border">23</div>
+					<div class="code_number_border">24</div>
+					<div class="code_number_border">25</div>
+					<div class="code_number_border">26</div>
+					<div class="code_number_border">27</div>
+					<div class="code_number_border">28</div>
+					<div class="code_number_border">29</div>
+					<div class="code_number_border">30</div>
+					<div class="code_number_border">31</div>
+					<div class="code_number_border">32</div>
+					<div class="code_number_border">33</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>public class TestEquals { </div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Person p1 = new Person(123,"ywh");</div>
+					<div class="right_2">Person p2 = new Person(123,"yzqtc");</div>
+					<div class="right_2">System.out.println(p1==p2);     //false，不是同一个对象</div>
+					<div class="right_2">System.out.println(p1.equals(p2));  //true，id相同则认为两个对象内容相同</div>
+					<div class="right_2">String s1 = new String("阿里巴巴");</div>
+					<div class="right_2">String s2 = new String("阿里巴巴");</div>
+					<div class="right_2">System.out.println(s1==s2);         //false, 两个字符串不是同一个对象</div>
+					<div class="right_2">System.out.println(s1.equals(s2));  //true,  两个字符串内容相同</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>class Person {</div>
+					<div class="right_1">int id;</div>
+					<div class="right_1">String name;</div>
+					<div class="right_1">public Person(int id,String name) {</div>
+					<div class="right_2">this.id=id;</div>
+					<div class="right_2">this.name=name;</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public boolean equals(Object obj) {</div>
+					<div class="right_2">if(obj == null){</div>
+					<div class="right_3">return false;</div>
+					<div class="right_2">}else {</div>
+					<div class="right_3">if(obj instanceof Person) {</div>
+					<div class="right_4">Person c = (Person)obj;</div>
+					<div class="right_4">if(c.id==this.id) {</div>
+					<div class="right_5">return true;</div>
+					<div class="right_4">}</div>
+					<div class="right_3">}</div>
+					<div class="right_2">}</div>
+					<div class="right_2">return false;</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					JDK提供的一些类，如String、Date、包装类等，重写了Object的equals方法，调用这些类的equals方法， x.equals (y) ，当x和y所引用的对象是同一类对象且属性内容相等时（并不一定是相同对象），返回 true 否则返回 false。
+				</li>					
+			</ul>
+		</div>
+	</body>
+</html>

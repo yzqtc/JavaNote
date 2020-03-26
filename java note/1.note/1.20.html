@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>控制语句-循环结构</title>
 	</head>
-	<link href="../css/java note.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/index/import.js"></script>
 	<body>
 		<!--
         	作者：1548185173@qq.com
@@ -14,19 +14,6 @@
         <center>
 			<h1>控制语句-循环结构</h1>  
         </center>
-        <div>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string thick">目录:</li>
-        	</ul>
-        	<ul class="ul">
-        		<li class="fontsize_1 null_string"><a href="#1">1.while循环</a></li>
-        		<li class="fontsize_1 null_string"><a href="#2">2.do-while循环 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#3">3.for循环 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#4">4.嵌套循环 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#5">5.break语句和continue语句 </a></li>
-        		<li class="fontsize_1 null_string"><a href="#6">6.带标签的break和continue</a></li>
-        	</ul>
-        </div>
 		<div>
 			<ul>
 				<li id="1" class="fontsize thick">while循环</li>					
@@ -36,21 +23,19 @@
 					语法结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>while (布尔表达式) {</td>
-						</tr>
-						<tr>
-							<td class="right_1">循环体</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>while (布尔表达式) {</div>
+					<div class="right_1">循环体</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					在循环刚开始时，会计算一次“布尔表达式”的值，若条件为真，执行循环体。而对于后来每一次额外的循环，都会在开始前重新计算一次
@@ -71,48 +56,37 @@
 					[示例1]while循环结构：求1到100之间的累加和:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test7 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int  i = 0;</td>
-						</tr>
-						<tr>
-							<td class="right_2">int  sum = 0;</td>
-						</tr>
-						<tr>
-							<td class="right_2">// 1+2+3+…+100=?</td>
-						</tr>
-						<tr>
-							<td class="right_2">while (i <= 100) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">sum += i;//相当于sum = sum+i;</td>
-						</tr>
-						<tr>
-							<td class="right_3">i++;</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("Sum= " + sum);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+				</div>
+				<div class="fontsize" id="codediv_2">
+					<div>public class Test7 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int  i = 0;</div>
+					<div class="right_2">int  sum = 0;</div>
+					<div class="right_2">// 1+2+3+…+100=?</div>
+					<div class="right_2">while (i <= 100) {</div>
+					<div class="right_3">sum += i;//相当于sum = sum+i;</div>
+					<div class="right_3">i++;</div>
+					<div class="right_2">}</div>
+					<div class="right_2">System.out.println("Sum= " + sum);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_2" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_2">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_2.png" />
@@ -126,21 +100,19 @@
 					语法结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>do {</td>
-						</tr>
-						<tr>
-							<td class="right_1">循环体</td>
-						</tr>
-						<tr>
-							<td>} while(布尔表达式) ;</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_3">
+					<div>do {</div>
+					<div class="right_1">循环体</div>
+					<div>} while(布尔表达式) ;</div>
+				</div>
+				<div class="copy" id="copy_3" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_3">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					do-while循环结构会先执行循环体，然后再判断布尔表达式的值，若条件为真，执行循环体，当条件为假时结束循环。do-while循环的循环体至少执行一次
@@ -156,45 +128,35 @@
 					[示例2]do-while循环结构：1-100之间的累加和:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test8 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int i = 0;</td>
-						</tr>
-						<tr>
-							<td class="right_2">int sum = 0;</td>
-						</tr>
-						<tr>
-							<td class="right_2">do {</td>
-						</tr>
-						<tr>
-							<td class="right_3">sum += i; // sum = sum + i</td>
-						</tr>
-						<tr>
-							<td class="right_3">i++;</td>
-						</tr>
-						<tr>
-							<td class="right_2">} while (i <= 100);//此处的；不能省略</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("Sum= " + sum);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+				</div>
+				<div class="fontsize" id="codediv_4">
+					<div>public class Test8 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int i = 0;</div>
+					<div class="right_2">int sum = 0;</div>
+					<div class="right_2">do {</div>
+					<div class="right_3">sum += i; // sum = sum + i</div>
+					<div class="right_3">i++;</div>
+					<div class="right_2">} while (i <= 100);//此处的；不能省略</div>
+					<div class="right_2">System.out.println("Sum= " + sum);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_4" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_4">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_4.png" />
@@ -205,63 +167,47 @@
 					[示例3]while与do-while的区别:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test9 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">//while循环：先判断再执行</td>
-						</tr>
-						<tr>
-							<td class="right_2">int a = 0;</td>
-						</tr>
-						<tr>
-							<td class="right_2">while (a < 0) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println(a);</td>
-						</tr>
-						<tr>
-							<td class="right_3">a++;</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("-----");</td>
-						</tr>
-						<tr>
-							<td class="right_2">//do-while循环：先执行再判断</td>
-						</tr>
-						<tr>
-							<td class="right_2">a = 0;</td>
-						</tr>
-						<tr>
-							<td class="right_2">do {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println(a);</td>
-						</tr>
-						<tr>
-							<td class="right_3">a++;</td>
-						</tr>
-						<tr>
-							<td class="right_2">} while (a < 0);</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+				</div>
+				<div class="fontsize" id="codediv_5">
+					<div>public class Test9 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">//while循环：先判断再执行</div>
+					<div class="right_2">int a = 0;</div>
+					<div class="right_2">while (a < 0) {</div>
+					<div class="right_3">System.out.println(a);</div>
+					<div class="right_3">a++;</div>
+					<div class="right_2">}</div>
+					<div class="right_2">System.out.println("-----");</div>
+					<div class="right_2">//do-while循环：先执行再判断</div>
+					<div class="right_2">a = 0;</div>
+					<div class="right_2">do {</div>
+					<div class="right_3">System.out.println(a);</div>
+					<div class="right_3">a++;</div>
+					<div class="right_2">} while (a < 0);</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_5" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_5">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_5.png" />
@@ -280,21 +226,19 @@
 					语法结构:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>for (初始表达式; 布尔表达式; 迭代因子) {</td>
-						</tr>
-						<tr>
-							<td class="right_1">循环体</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+				</div>
+				<div class="fontsize" id="codediv_6">
+					<div>for (初始表达式; 布尔表达式; 迭代因子) {</div>
+					<div class="right_1">循环体</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_6" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_6">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					for循环语句是支持迭代的一种通用结构，是最有效、最灵活的循环结构。for循环在第一次反复之前要进行初始化，即执行初始表达式;随后，对布尔表达式进行判定，若判定结果为true，则执行循环体，否则，终止循环;最后在每一次反复的时候，进行某种形式的“步进”，即执行迭代因子
@@ -330,72 +274,53 @@
 					[示例4]for循环:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test10 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int sum = 0;</td>
-						</tr>
-						<tr>
-							<td class="right_2">//1.求1-100之间的累加和</td>
-						</tr>
-						<tr>
-							<td class="right_2">for (int i = 0; i <= 100; i++) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">sum += i;</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("Sum= " + sum);</td>
-						</tr>
-						<tr>
-							<td class="right_2">//2.循环输出9-1之间的数</td>
-						</tr>
-						<tr>
-							<td class="right_2">for(int i=9;i>0;i--){</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.print(i+"、");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println();</td>
-						</tr>
-						<tr>
-							<td class="right_2">//3.输出90-1之间能被3整除的数</td>
-						</tr>
-						<tr>
-							<td class="right_2">for(int i=90;i>0;i-=3){</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.print(i+"、");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println();</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+				</div>
+				<div class="fontsize" id="codediv_7">
+					<div>public class Test10 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int sum = 0;</div>
+					<div class="right_2">//1.求1-100之间的累加和</div>
+					<div class="right_2">for (int i = 0; i <= 100; i++) {</div>
+					<div class="right_3">sum += i;</div>
+					<div class="right_2">}</div>
+					<div class="right_2">System.out.println("Sum= " + sum);</div>
+					<div class="right_2">//2.循环输出9-1之间的数</div>
+					<div class="right_2">for(int i=9;i>0;i--){</div>
+					<div class="right_3">System.out.print(i+"、");</div>
+					<div class="right_2">}</div>
+					<div class="right_2">System.out.println();</div>
+					<div class="right_2">//3.输出90-1之间能被3整除的数</div>
+					<div class="right_2">for(int i=90;i>0;i-=3){</div>
+					<div class="right_3">System.out.print(i+"、");</div>
+					<div class="right_2">}</div>
+					<div class="right_2">System.out.println();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_7" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_7">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_7.png" />
@@ -411,33 +336,27 @@
 					[示例5]逗号运算符:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test11 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">for(int i = 1, j = i + 10; i < 5; i++, j = i * 2) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println("i= " + i + " j= " + j);</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_8">
+					<div>public class Test11 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">for(int i = 1, j = i + 10; i < 5; i++, j = i * 2) {</div>
+					<div class="right_3">System.out.println("i= " + i + " j= " + j);</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_8" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_8">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_8.png" />
@@ -463,30 +382,27 @@
 					[示例6]无限循环:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test12 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("hello");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+				</div>
+				<div class="fontsize" id="codediv_9">
+					<div>public class Test12 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">for ( ; ; ) { // 无限循环: 相当于 while(true)</div>
+					<div class="right_3">System.out.println("hello");</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_9" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_9">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					编译器将while(true)与for(;;)看作同一回事，都指的是无限循环
@@ -515,42 +431,33 @@
 					[示例7]嵌套循环:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test14 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">for (int i=1; i <=5; i++) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">for(int j=1; j<=5; j++){</td>
-						</tr>
-						<tr>
-							<td class="right_4">System.out.print(i+"  ");</td>
-						</tr>
-						<tr>
-							<td class="right_3">}</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println();</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+				</div>
+				<div class="fontsize" id="codediv_10">
+					<div>public class Test14 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">for (int i=1; i <=5; i++) {</div>
+					<div class="right_3">for(int j=1; j<=5; j++){</div>
+					<div class="right_4">System.out.print(i+"  ");</div>
+					<div class="right_3">}</div>
+					<div class="right_3">System.out.println();</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_10" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_10">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_10.png" />
@@ -561,42 +468,33 @@
 					[示例8]使用嵌套循环实现九九乘法表:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test15 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">for (int i = 1; i < 10; i++) { // i是一个乘数</td>
-						</tr>
-						<tr>
-							<td class="right_3">for (int j = 1; j <= i; j++) { // j是另一个乘数</td>
-						</tr>
-						<tr>
-							<td class="right_4">System.out.print(j + "*" + i + "=" + (i * j < 10 ? (" " + i * j) : i * j) + "  ");</td>
-						</tr>
-						<tr>
-							<td class="right_3">}</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.println();</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+				</div>
+				<div class="fontsize" id="codediv_11">
+					<div>public class Test15 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">for (int i = 1; i < 10; i++) { // i是一个乘数</div>
+					<div class="right_3">for (int j = 1; j <= i; j++) { // j是另一个乘数</div>
+					<div class="right_4">System.out.print(j + "*" + i + "=" + (i * j < 10 ? (" " + i * j) : i * j) + "  ");</div>
+					<div class="right_3">}</div>
+					<div class="right_3">System.out.println();</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_11" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_11">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_11.png" />
@@ -615,60 +513,45 @@
 					[示例9]break语句:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test16 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int total = 0;//定义计数器</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("Begin");</td>
-						</tr>
-						<tr>
-							<td class="right_2">while (true) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">total++;//每循环一次计数器加1</td>
-						</tr>
-						<tr>
-							<td class="right_3">int i = (int) Math.round(100 * Math.random());</td>
-						</tr>
-						<tr>
-							<td class="right_3">//当i等于88时，退出循环</td>
-						</tr>
-						<tr>
-							<td class="right_3">if (i == 88) {</td>
-						</tr>
-						<tr>
-							<td class="right_4">break;</td>
-						</tr>
-						<tr>
-							<td class="right_3">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">//输出循环的次数</td>
-						</tr>
-						<tr>
-							<td class="right_2">System.out.println("Game over， used " + total + " times.");</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+				</div>
+				<div class="fontsize" id="codediv_12">
+					<div>public class Test16 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int total = 0;//定义计数器</div>
+					<div class="right_2">System.out.println("Begin");</div>
+					<div class="right_2">while (true) {</div>
+					<div class="right_3">total++;//每循环一次计数器加1</div>
+					<div class="right_3">int i = (int) Math.round(100 * Math.random());</div>
+					<div class="right_3">//当i等于88时，退出循环</div>
+					<div class="right_3">if (i == 88) {</div>
+					<div class="right_4">break;</div>
+					<div class="right_3">}</div>
+					<div class="right_2">}</div>
+					<div class="right_2">//输出循环的次数</div>
+					<div class="right_2">System.out.println("Game over， used " + total + " times.");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_12" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_12">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_12.png" />
@@ -680,17 +563,17 @@
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string thick">
+				<li class="fontsize null_string thick color_red">
 					注意事项:
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					(1)continue用在while，do-while中，continue 语句立刻跳到循环首部，越过了当前循环的其余部分
 				</li>					
 			</ul>
 			<ul class="ul">
-				<li class="fontsize null_string">
+				<li class="fontsize string_1">
 					(2)continue用在for循环中，跳到for循环的迭代因子部分
 				</li>					
 			</ul>
@@ -699,66 +582,49 @@
 					[示例10]continue语句：把100~150之间不能被3整除的数输出，并且每行输出5个:
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test17 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">int count = 0;//定义计数器</td>
-						</tr>
-						<tr>
-							<td class="right_2">for (int i = 100; i < 150; i++) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">//如果是3的倍数，则跳过本次循环，继续进行下一次循环</td>
-						</tr>
-						<tr>
-							<td class="right_3">if (i % 3 == 0){</td>
-						</tr>
-						<tr>
-							<td class="right_4">continue;</td>
-						</tr>
-						<tr>
-							<td class="right_3">}</td>
-						</tr>
-						<tr>
-							<td class="right_3">//否则（不是3的倍数），输出该数</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.print(i + "、");</td>
-						</tr>
-						<tr>
-							<td class="right_3">count++;//没输出一个数，计数器加1</td>
-						</tr>
-						<tr>
-							<td class="right_3">//根据计数器判断每行是否已经输出了5个数</td>
-						</tr>
-						<tr>
-							<td class="right_3">if (count % 5 == 0) {</td>
-						</tr>
-						<tr>
-							<td class="right_4">System.out.println();</td>
-						</tr>
-						<tr>
-							<td class="right_3">}</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+				</div>
+				<div class="fontsize" id="codediv_13">
+					<div>public class Test17 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">int count = 0;//定义计数器</div>
+					<div class="right_2">for (int i = 100; i < 150; i++) {</div>
+					<div class="right_3">//如果是3的倍数，则跳过本次循环，继续进行下一次循环</div>
+					<div class="right_3">if (i % 3 == 0){</div>
+					<div class="right_4">continue;</div>
+					<div class="right_3">}</div>
+					<div class="right_3">//否则（不是3的倍数），输出该数</div>
+					<div class="right_3">System.out.print(i + "、");</div>
+					<div class="right_3">count++;//没输出一个数，计数器加1</div>
+					<div class="right_3">//根据计数器判断每行是否已经输出了5个数</div>
+					<div class="right_3">if (count % 5 == 0) {</div>
+					<div class="right_4">System.out.println();</div>
+					<div class="right_3">}</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_13" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_13">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_13.png" />
@@ -787,48 +653,37 @@
 					[示例11]带标签break和continue：控制嵌套循环跳转(打印101-150之间所有的质数):
 				</li>					
 			</ul>
-			<ul class="ul">
-				<li class="fontsize">
-					<table class="border_radius" rules="cols" style="margin-left: 50px;" cellpadding="0" cellspacing="0" width="1000">
-						<tr>
-							<td>public class Test18 {</td>
-						</tr>
-						<tr>
-							<td class="right_1">public static void main(String[] args) {</td>
-						</tr>
-						<tr>
-							<td class="right_2">outer: for (int i = 101; i < 150; i++) {</td>
-						</tr>
-						<tr>
-							<td class="right_3">for (int j = 2; j < i / 2; j++) {</td>
-						</tr>
-						<tr>
-							<td class="right_4">if (i % j == 0){</td>
-						</tr>
-						<tr>
-							<td class="right_5">continue outer;</td>
-						</tr>
-						<tr>
-							<td class="right_4">}</td>
-						</tr>
-						<tr>
-							<td class="right_3">}</td>
-						</tr>
-						<tr>
-							<td class="right_3">System.out.print(i + "  ");</td>
-						</tr>
-						<tr>
-							<td class="right_2">}</td>
-						</tr>
-						<tr>
-							<td class="right_1">}</td>
-						</tr>
-						<tr>
-							<td>}</td>
-						</tr>
-					</table>
-				</li>					
-			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+				</div>
+				<div class="fontsize" id="codediv_14">
+					<div>public class Test18 {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">outer: for (int i = 101; i < 150; i++) {</div>
+					<div class="right_3">for (int j = 2; j < i / 2; j++) {</div>
+					<div class="right_4">if (i % j == 0){</div>
+					<div class="right_5">continue outer;</div>
+					<div class="right_4">}</div>
+					<div class="right_3">}</div>
+					<div class="right_3">System.out.print(i + "  ");</div>
+					<div class="right_2">}</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_14" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_14">复制</div>
+			</div>
 			<ul class="ul">
 				<li class="fontsize null_string">
 					<img src="../img/1.20_14.png" />
