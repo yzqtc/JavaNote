@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抽象类,抽象方法</title>
+	</head>
+	<script type="text/javascript" src="../js/index/import.js"></script>
+	<body>
+		<!--
+        	作者：1548185173@qq.com
+        	时间：2020-03-27
+        	描述：抽象类,抽象方法
+        -->
+        <center>
+			<h1>抽象类,抽象方法</h1>  
+        </center>
+		<div>
+			<ul>
+				<li id="1" class="fontsize thick">抽象类</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					包含抽象方法的类就是抽象类。通过abstract方法定义规范，然后要求子类必须定义具体实现。通过抽象类，我们就可以做到严格限制子类的设计，使子类之间更加通用。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string thick">
+					抽象类的使用要点:
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					1.有抽象方法的类只能定义成抽象类
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					2.抽象类不能实例化，即不能用new来实例化抽象类。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					3.抽象类可以包含属性、方法、构造方法。但是构造方法不能用来new实例，只能用来被子类调用。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					4.抽象类只能用来被继承。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize string_1">
+					5.抽象方法必须被子类实现。
+				</li>					
+			</ul>
+			<ul>
+				<li id="2" class="fontsize thick">抽象方法</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					使用abstract修饰的方法，没有方法体，只有声明。定义的是一种“规范”，就是告诉子类必须要给抽象方法提供具体的实现。
+				</li>					
+			</ul>
+			<ul class="ul">
+				<li class="fontsize null_string">
+					[示例]抽象类和抽象方法的基本用法:
+				</li>					
+			</ul>
+			<div class="margin_left80 code_border position_relative">
+				<div class="fontsize number_border">
+					<div class="code_number_border">1</div>
+					<div class="code_number_border">2</div>
+					<div class="code_number_border">3</div>
+					<div class="code_number_border">4</div>
+					<div class="code_number_border">5</div>
+					<div class="code_number_border">6</div>
+					<div class="code_number_border">7</div>
+					<div class="code_number_border">8</div>
+					<div class="code_number_border">9</div>
+					<div class="code_number_border">10</div>
+					<div class="code_number_border">11</div>
+					<div class="code_number_border">12</div>
+					<div class="code_number_border">13</div>
+					<div class="code_number_border">14</div>
+					<div class="code_number_border">15</div>
+					<div class="code_number_border">16</div>
+					<div class="code_number_border">17</div>
+					<div class="code_number_border">18</div>
+					<div class="code_number_border">19</div>
+					<div class="code_number_border">20</div>
+					<div class="code_number_border">21</div>
+				</div>
+				<div class="fontsize" id="codediv_1">
+					<div>//抽象类</div>
+					<div>abstract class Animal {</div>
+					<div class="right_1">abstract public void shout();  //抽象方法</div>
+					<div>}</div>
+					<div>class Dog extends Animal { </div>
+					<div class="right_1">//子类必须实现父类的抽象方法，否则编译错误</div>
+					<div class="right_1">public void shout() {</div>
+					<div class="right_2">System.out.println("汪汪汪！");</div>
+					<div class="right_1">}</div>
+					<div class="right_1">public void seeDoor(){</div>
+					<div class="right_2">System.out.println("看门中....");</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+					<div>//测试抽象类</div>
+					<div>public class TestAbstractClass {</div>
+					<div class="right_1">public static void main(String[] args) {</div>
+					<div class="right_2">Dog a = new Dog();</div>
+					<div class="right_2">a.shout();</div>
+					<div class="right_2">a.seeDoor();</div>
+					<div class="right_1">}</div>
+					<div>}</div>
+				</div>
+				<div class="copy" id="copy_1" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-target="#codediv_1">复制</div>
+			</div>
+		</div>
+	</body>
+</html>
